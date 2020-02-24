@@ -11,12 +11,12 @@
 </head>
 <body class="bg-black min-h-screen flex flex-col text-white">
 
-<header class="border-b border-white text-center flex-col bg-purple-middle">
+<header class="border-b border-white text-center flex-col bg-white text-tinder">
 
-    <div class="flex flex-row items-center justify-between w-full p-4 lg:p-12">
+    <div class="flex flex-row items-center justify-between w-full p-4 lg:px-12 lg:py-4">
 
-        <div class="h-16 w-16 rounded-full overflow-hidden">
-            <img src="https://www.placemonkeys.com/500" alt="Logo" class="object-cover w-full h-full">
+        <div class="h-16 lg:h-24 rounded-full overflow-hidden">
+            <img src="./resources/images/tinder.png" alt="Logo" class="object-cover w-full h-full">
         </div>
 
         <div>
@@ -27,7 +27,7 @@
             <i class="icon- icon-menu cursor-pointer text-2xl"></i>
         </div>
 
-        <div class="hidden lg:block">
+        <div class="hidden lg:block font-bold">
 
             <div class="flex">
                 <p><a href="#">Présentation</a></p>
@@ -40,7 +40,7 @@
 
     </div>
 
-    <nav id="menuMobile" class="lg:hidden z-50 bg-purple-middle min-h-allScreen w-full absolute top-0 py-8 px-4"> <!-- Mobile -->
+    <nav id="menuMobile" class="lg:hidden z-50 bg-white min-h-allScreen w-full absolute top-0 py-8 px-4"> <!-- Mobile -->
 
         <div class="relative">
 
@@ -50,7 +50,7 @@
 
         </div>
 
-        <div class="flex justify-center mt-32">
+        <div class="flex justify-center mt-32 font-bold">
             <div class="text-2xl">
                 <p id="optionsMobile1"><a href="#">Présentation</a></p>
                 <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
@@ -110,6 +110,8 @@
 </footer>
 
 <script>
+
+    gsap.from("body", {x: -2000, duration: 0.8});
 
     $('#menuMobile').hide();
 
