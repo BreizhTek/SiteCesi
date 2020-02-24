@@ -8,14 +8,14 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
-    
-    <script>
-    $( function() {
-      $( "#accordion" ).accordion({
-        collapsible: true
-      });
-    } );
-    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  } );
+  </script>
 </head>
 <body class="bg-white min-h-screen flex flex-col text-tinder">
 
@@ -168,61 +168,54 @@
                 </div>
 
             </div>
-            
 
-            
+
+
         </div>
 
         <div id="price">
             
             <div id="accordion">
-                <h3>First header</h3>
-                <div>First content panel</div>
-                <h3>Second header</h3>
-                <div>Second content panel</div>
-             </div>
-            <!--
-            <h3>Free (0€ /Mois)</h3>
-            <div>
-                <div id="privilege">
-                    <p>Privilège de cette offre</p>
+                <h2 class="text-2xl">Free (0€ /Mois)</h2>
+                <div>
+                    <div id="privilege">
+                        <p>Privilège de cette offre</p>
+                    </div>
+                    <div id="list_privilege">
+                        - 200 Likes par jour</br>
+                        - 5 Super Like </br>
+                        - 20 % de chance d'affichage du profil</br>
+                        - 3 Photos de profil</br>
+                        - Connection profil instagram</br>
+                    </div>
                 </div>
-                <div id="list_privilege">
-                    - 200 Likes par jour</br>
-                    - 5 Super Like </br>
-                    - 20 % de chance d'affichage du profil</br>
-                    - 3 Photos de profil</br>
-                    - Connection profil instagram</br>
-                </div>    
-            </div>
-            <h3>Premium (5€ /Mois)</h3>
-            <div>
-                <div id="privilege">
-                    <p>Privilège de cette offre</p>
+                <h2 class="text-2xl">Premium (5€ /Mois)</h2>
+                <div>
+                    <div id="privilege">
+                        <p>Privilège de cette offre</p>
+                    </div>
+                    <div id="list_privilege">
+                        - 500 Likes par jour </br>
+                        - 10 Super Like </br>
+                        - 70 % de chance d'affichage du profil</br>
+                        - 5 Photos de profil</br>
+                        - Connection profil instagram</br>
+                    </div>
                 </div>
-                <div id="list_privilege">
-                    - 500 Likes par jour </br>
-                    - 10 Super Like </br>
-                    - 70 % de chance d'affichage du profil</br>
-                    - 5 Photos de profil</br>
-                    - Connection profil instagram</br>
-                </div>
-            </div>
-            <h3>Gold (10€ /Mois)</h3>
-            <div>
-                <div id="privilege">
-                    <p>Privilège de cette offre</p>
-                </div>
-                <div id="list_privilege">
-                    - Nb illimitésde likes par jour</br>
-                    - 20 Super Like </br>
-                    - 100 % de chance d'affichage du profil</br>
-                    - 8 photos de profil</br>
-                    - Connection profil instagram</br>
+                <h2 class="text-2xl">Gold (10€ /Mois)</h2>
+                <div>
+                    <div id="privilege">
+                        <p>Privilège de cette offre</p>
+                    </div>
+                    <div id="list_privilege">
+                        - Nb illimitésde likes par jour</br>
+                        - 20 Super Like </br>
+                        - 100 % de chance d'affichage du profil</br>
+                        - 8 photos de profil</br>
+                        - Connection profil instagram</br>
+                    </div>
                 </div>
             </div>
-            -->
-        </div>
 
         <div id="team">
 
@@ -233,9 +226,6 @@
         </div>
 
     </div>
-
-
-
 </main>
 
 
@@ -278,6 +268,5 @@
     })
 
 </script>
-
 </body>
 </html>

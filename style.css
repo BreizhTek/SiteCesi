@@ -65849,4 +65849,26 @@ video {
   .xl\:duration-1000 {
     transition-duration: 1000ms;
   }
+  
 }
+  /* JQuezy Accordion */
+  .accordion_item {
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion_title{
+      font-size: 14px;
+      font-weight: bold;
+      color: red;
+      line-height: 140%;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      padding: 8px;
+  }
+  .accordion_content{
+      display: none;
+      padding: 8px;
+  }
