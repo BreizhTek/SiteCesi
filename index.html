@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="referrer" content="strict-origin" />
     <title>Site Cesi</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./resources/fontello/css/fontello.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
@@ -19,9 +19,9 @@
 </head>
 <body class="bg-black min-h-screen flex flex-col text-white">
 
-<header class="border-b border-white text-center flex-col bg-white text-tinder">
+<header class="border-b border-white text-center flex-col text-tinder">
 
-    <div class="flex flex-row items-center justify-between w-full p-4 lg:px-12 lg:py-4">
+    <div class="flex flex-row items-center bg-white justify-between w-full p-4 lg:px-12 lg:py-4">
 
         <div class="h-16 lg:h-24 rounded-full overflow-hidden">
             <img src="./resources/images/tinder.png" alt="Logo" class="object-cover w-full h-full">
@@ -31,41 +31,35 @@
             <h1 class="uppercase text-3xl font-bold">Tinder</h1>
         </div>
 
-        <div id="Open" class="lg:hidden">
-            <i class="icon- icon-menu cursor-pointer text-2xl"></i>
+        <div class="lg:hidden">
+            <i id="Open" class="icon-menu cursor-pointer text-2xl"></i>
+            <i id="Close" class="icon-cancel icon- icon-cancel cursor-pointer text-2xl hidden"></i>
         </div>
 
         <div class="hidden lg:block font-bold">
 
             <div class="flex">
-                <p><a href="#">Présentation</a></p>
-                <p class="ml-4"><a href="#">Caractéristiques</a></p>
-                <p class="ml-4"><a href="#">Prix</a></p>
-                <p class="ml-4"><a href="#">Contact</a></p>
+                <p class="menuItem"><a href="#">Présentation</a></p>
+                <p class="ml-4 menuItem"><a href="#">Caractéristiques</a></p>
+                <p class="ml-4 menuItem"><a href="#">Prix</a></p>
+                <p class="ml-4 menuItem"><a href="#">Contact</a></p>
             </div>
 
         </div>
 
     </div>
 
-    <nav id="menuMobile" class="lg:hidden z-50 bg-white min-h-allScreen w-full absolute top-0 py-8 px-4"> <!-- Mobile -->
+    <nav id="menuMobile" class="lg:hidden z-50 bg-white min-h-allScreen absolute w-full py-8 px-4"> <!-- Mobile -->
 
-        <div class="relative">
-
-            <div class="absolute top-0 right-0" id="Close">
-                <i class="icon- icon-cancel text-2xl"></i>
+            <div class="flex justify-center mt-32 font-bold">
+                <div class="text-2xl">
+                    <p id="optionsMobile1"><a href="#">Présentation</a></p>
+                    <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
+                    <p id="optionsMobile3" class="my-4"><a href="#">Prix</a></p>
+                    <p id="optionsMobile4"><a href="#">Contact</a></p>
+                </div>
             </div>
 
-        </div>
-
-        <div class="flex justify-center mt-32 font-bold">
-            <div class="text-2xl">
-                <p id="optionsMobile1"><a href="#">Présentation</a></p>
-                <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
-                <p id="optionsMobile3" class="my-4"><a href="#">Prix</a></p>
-                <p id="optionsMobile4"><a href="#">Contact</a></p>
-            </div>
-        </div>
 
     </nav>
 
@@ -167,24 +161,28 @@
 <script>
 
     gsap.from("body", {x: -2000, duration: 0.8});
+    let tl = gsap.timeline();
+    tl.pause();
+    tl.from("#menuMobile", {opacity: 100, x: 2000, duration: 0.8});
+    tl.from('#optionsMobile1', {fontSize: 800, y: 2000, duration: 0.3}, ">-0.45");
+    tl.from('#optionsMobile2', {fontSize: 800, y: 2000, duration: 0.3}, ">");
+    tl.from('#optionsMobile3', {fontSize: 800, y: 2000, duration: 0.3}, ">");
+    tl.from('#optionsMobile4', {fontSize: 800, y: 2000, duration: 0.3}, ">");
 
     $('#menuMobile').hide();
 
     $('#Open').click(function() {
-        $('body').addClass('overflow-hidden')
-        let tl = gsap.timeline();
+        $('body').addClass('overflow-hidden');
+        $('#Open').addClass('hidden');
+        $('#Close').removeClass('hidden');
         $('#menuMobile').show();
-        tl.from("#menuMobile", {opacity: 100, x: 2000, duration: 0.8});
-        tl.from('#optionsMobile1', {fontSize: 800, y: 2000, duration: 0.3}, ">-0.45");
-        tl.from('#optionsMobile2', {fontSize: 800, y: 2000, duration: 0.3}, ">");
-        tl.from('#optionsMobile3', {fontSize: 800, y: 2000, duration: 0.3}, ">");
-        tl.from('#optionsMobile4', {fontSize: 800, y: 2000, duration: 0.3}, ">");
-
-        console.log("Open");
+        tl.restart();
     })
 
     $('#Close').click(function () {
         $('body').removeClass('overflow-hidden');
+        $('#Close').addClass('hidden');
+        $('#Open').removeClass('hidden');
             $('#menuMobile').hide();
     })
 
