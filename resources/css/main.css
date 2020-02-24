@@ -3,3 +3,11 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.menuItem {
+    @apply border-b-2 border-transparent;
+}
+
+.menuItem:hover {
+    @apply border-tinder border-b-2;
+}
