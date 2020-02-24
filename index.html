@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Site Cesi</title>
     <link rel="stylesheet" href="./style.css">
+
 </head>
 <body class="bg-black min-h-screen flex flex-col text-white">
+<button onclick="backToTop()" id="btnUp" class="flex fixed bottom-0 right-0 bg-purple-middle m-2 mb-64 hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full" title="Back to top">TOP</button> <! Button to back to top of the page />
 
 <header class="border-b border-white text-center">
     HEADER
@@ -19,19 +21,37 @@
     </nav>
 
 </header>
-
 <main class="flex flex-grow">
 
-    <div id="presentation" class="w-full m-8 border rounded-lg overflow-hidden">
+    <div id="presentation" class="min-w-full  bg-customWhite overflow-hidden"> <! fast's app presentation />
 
-        <div class="w-full border-b">
-            <img src=" https://www.placemonkeys.com/500" alt="Tinder" class="mx-auto">
+        <div class="flex justify-center  p-4  w-full">
+            <p class="text-gray-700 text-center font-extrabold">Lorem ipsum qdmokqsodk qosohdoqsdho qhsqokhd lqsshd lqshdlùqh <br> qsdùl hqssldh qkùslkdh qhsdù hqdsùlh </p>
         </div>
 
-        <div>
-            <p>Lorem ipsum qdmokqsodk qosohdoqsdho qhsqokhd lqsshd lqshdlùqh qsdùl hqssldh qkùslkdh qhsdù hqdsùlh </p>
-        </div>
+        <div class="flex justify-center box-border p-4 w-full"> <! Button "Download" />
+            <button class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full">
+                Obtenir l'application
+            </button>
+            <i class=" "></i>
+        <i class=""></i>
+    </div>
 
+    <div id="download" class="lg:flex  min-w-full   bg-customWhite overflow-hidden"> <! to download the app />
+     <div class="flex justify-center w-full lg:w-1/2 p-4">
+                <i class=""></i>
+         <button class=" bg-purple-middle m-2 mr-3 hover:bg-purple-light font-bold text-customWhite py-2 px-4 rounded inline-flex items-center">
+             <svg class="fill-current w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+             <span>Télécharger</span>
+         </button>
+            </div>
+        <div class="flex justify-center lg:w-1/2  p-4">
+            <i class=""></i>
+            <button class=" bg-purple-middle m-2 mr-3 hover:bg-purple-light font-bold text-customWhite py-2 px-4 rounded inline-flex items-center">
+                <svg class="fill-current w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                <span>Télécharger</span>
+            </button>
+        </div>
     </div>
 
     <div id="features">
@@ -54,8 +74,12 @@
 
 <footer class="border-t border-white text-center">
     FOOTER
-</footer>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+</footer>
+<script src="ztl_code.js"></script>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
