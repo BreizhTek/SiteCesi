@@ -40,7 +40,7 @@
 
     </div>
 
-    <nav id="menuMobile" class="lg:hidden bg-purple-middle min-h-screen w-full absolute top-0 py-8 px-4"> <!-- Mobile -->
+    <nav id="menuMobile" class="lg:hidden z-50 bg-purple-middle min-h-allScreen w-full absolute top-0 py-8 px-4"> <!-- Mobile -->
 
         <div class="relative">
 
@@ -50,12 +50,12 @@
 
         </div>
 
-        <div id="optionsMobile" class="flex justify-center mt-32">
+        <div class="flex justify-center mt-32">
             <div class="text-2xl">
-                <p><a href="#">Présentation</a></p>
-                <p class="my-4"><a href="#">Caractéristiques</a></p>
-                <p class="my-4"><a href="#">Prix</a></p>
-                <p><a href="#">Contact</a></p>
+                <p id="optionsMobile1"><a href="#">Présentation</a></p>
+                <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
+                <p id="optionsMobile3" class="my-4"><a href="#">Prix</a></p>
+                <p id="optionsMobile4"><a href="#">Contact</a></p>
             </div>
         </div>
 
@@ -114,13 +114,20 @@
     $('#menuMobile').hide();
 
     $('#Open').click(function() {
+        $('body').addClass('overflow-hidden')
+        let tl = gsap.timeline();
         $('#menuMobile').show();
-        gsap.from("#menuMobile", {opacity: 100, x: 2000, duration: 0.3});
-        gsap.from('#optionsMobile', {y: 200, duration: 1});
+        tl.from("#menuMobile", {opacity: 100, x: 2000, duration: 0.8});
+        tl.from('#optionsMobile1', {fontSize: 800, y: 2000, duration: 0.3}, ">-0.45");
+        tl.from('#optionsMobile2', {fontSize: 800, y: 2000, duration: 0.3}, ">");
+        tl.from('#optionsMobile3', {fontSize: 800, y: 2000, duration: 0.3}, ">");
+        tl.from('#optionsMobile4', {fontSize: 800, y: 2000, duration: 0.3}, ">");
+
         console.log("Open");
     })
 
     $('#Close').click(function () {
+        $('body').removeClass('overflow-hidden');
             $('#menuMobile').hide();
     })
 

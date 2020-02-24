@@ -8,6 +8,9 @@ module.exports = {
           light: '#f46f79'
         },
         customWhite: '#fcdbdd',
+      },
+      minHeight: {
+        allScreen: '200vh',
       }
     },
   },
