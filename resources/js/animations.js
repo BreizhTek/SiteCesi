@@ -1,6 +1,6 @@
 $(function () { // wait for document ready
 
-    var scrollAnim = ['#features'];
+    var scrollAnim = ['features', 'price'];
 
     console.log(scrollAnim.length);
 
@@ -39,7 +39,7 @@ $(function () { // wait for document ready
             offset: 50, // move trigger to center of element
             reverse: false
         })
-            .setClassToggle(scrollAnim[i], "visible") // add class to reveal
+            .setClassToggle('#' + scrollAnim[i], "visible") // add class to reveal
             .addTo(controller);
     }
 
