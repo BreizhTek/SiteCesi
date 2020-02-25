@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Site Cesi</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body class="bg-black min-h-screen flex flex-col text-white">
 
@@ -51,9 +52,58 @@
     </div>
 
 </main>
+<!-- PARTIE QUENTIN DOPPLER -->
+<footer >
+    <div id="bande-footer" >
 
-<footer class="border-t border-white text-center">
-    FOOTER
+        <!-- Partie téléchargement de l'application (situé en bas à gauche) -->
+        <div id ="partie-gauche" >
+           <p>
+                Télécharger l'application sur
+           </p>
+           <p>
+                <a href="https://apps.apple.com/fr/app/tinder/id547702041" >logo Apple</a>
+           </p>
+           <p>
+                <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" >logo Android</a>
+           </p>
+        </div>
+
+        <!-- Partie détails de l'entreprise et autres infos (situé en bas au milieu) -->
+        <div id="partie-milieu" >
+            <p>
+                Entrepise
+            </p>
+            <p>
+                <a href="https://www.gotinder.com/jobs?locale=fr">Emplois</a>
+            </p>
+            <p>
+                <a href="https://www.gotinder.com/contact?locale=fr">Contact </a>
+            </p>
+            <p>
+                <a href="https://www.gotinder.com/security?locale=fr">Protection des données </a>
+            </p>
+        </div>
+        <!-- Partie suivis des réseaux sociaux (situé en bas à droite) -->
+        <div id="partie-droite" >
+            <p>
+                Suivez-nous :
+            </p>
+            <p>
+                <a href="https://www.facebook.com/tinderfr/" > FACEBOOK </a>
+                <a href="https://www.instagram.com/tinder/" > INSTA </a>
+                <a href="#" > TWITTER </a>
+                <a href="https://www.youtube.com/Tinder" > YOUTUBE </a>
+            </p>
+        </div>
+    </div><br>
+
+    <!-- Partie politique de confidentialité avec le bouton qui génèrera une popup -->
+    <div id="condition" class="text-center border-t">
+        <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
+            <a href="condition.html" id="manual-ajax" >Politique de confidentialité - Condition d'utilisation</a>
+        </p>
+    </div>
 </footer>
 
 <script
@@ -61,5 +111,13 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
+<script src="./modalCondition.js" ></script>
+
+<!-- JQuery permettant le fonctionnement de la modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+
 </body>
 </html>
