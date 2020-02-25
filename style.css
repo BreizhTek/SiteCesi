@@ -13675,6 +13675,17 @@ video {
   border-bottom-width: 2px;
 }
 
+.appear {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease-in-out;
+}
+
+.appear.visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
