@@ -1,5 +1,9 @@
 $(function () { // wait for document ready
 
+    var scrollAnim = ['#features'];
+
+    console.log(scrollAnim.length);
+
     gsap.from("body", {x: -2000, duration: 0.8});
     let tl = gsap.timeline();
     tl.pause();
@@ -26,13 +30,27 @@ $(function () { // wait for document ready
         $('#menuMobile').hide();
     })
 
-    var controller = new ScrollMagic.Controller({loglevel: 3});
+    var controller = new ScrollMagic.Controller();
 
-    new ScrollMagic.Scene({
-        triggerElement: "#trigger-features",
-        offset: 50 // move trigger to center of element
-    })
-        .setClassToggle("#features", "visible") // add class to reveal
-        .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
+    for (let i = 0; i < scrollAnim.length; i++)
+    {
+        new ScrollMagic.Scene({
+            triggerElement: "#trigger-"+scrollAnim[i],
+            offset: 50, // move trigger to center of element
+            reverse: false
+        })
+            .setClassToggle(scrollAnim[i], "visible") // add class to reveal
+            .addTo(controller);
+    }
+
+    var buttonUp = document.getElementById("btnUp"); // Button to allow to back to top page
+
+// back to top of the page
+    window.backToTop = function () {
+        const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollPosition > 0) {
+            window.requestAnimationFrame(backToTop); // refresh the animation
+            window.scrollTo(0, scrollPosition - scrollPosition / 12); // position, smooth
+        }
+    };
 });

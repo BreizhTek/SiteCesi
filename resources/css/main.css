@@ -12,7 +12,7 @@
     @apply border-tinder border-b-2;
 }
 
-.appear {
+[class^="appear-"] {
     opacity: 0;
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
@@ -25,11 +25,19 @@
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
-.appear.visible {
+
+[class^="appear-"].visible {
     opacity: 1;
     -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
     -o-transform: none;
     transform: none;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
 }
