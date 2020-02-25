@@ -2,7 +2,15 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Site Cesi</title>
+
+    <meta name="description" content="Application de rencontre">
+    <meta name="keywords" content="Love,Amour,Rencontre">
+    <meta name="author" content="BreizhTek">
+
+    <title>Tinder</title>
+    <link rel="icon" href="/resources/images/icontinder.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./resources/fontello/css/fontello.css">
 
@@ -15,18 +23,11 @@
 
     <script src="resources/js/animations.js"></script>
 
-    <script>
-        $( function() {
-            $( "#accordion" ).accordion({
-            collapsible: true
-            });
-        } );
-  </script>
 </head>
 <body class="bg-white min-h-screen flex flex-col text-tinder">
 
-<div class="fixed bottom-0 right-0">
-    <button onclick="backToTop()" id="btnUp" class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full" title="Back to top">TOP</button> <!-- Button to back to top of the page -->
+<div class="hidden lg:block fixed mb-40 mr-4 bottom-0 right-0">
+    <button onclick="backToTop()" id="btnUp" class="bg-tinder hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full" title="Back to top"><i class="icon-up-big"></i></button> <!-- Button to back to top of the page -->
 </div>
 
 <header class="border-b border-white text-center flex-col text-tinder">
@@ -49,10 +50,10 @@
         <div class="hidden lg:block font-bold">
 
             <div class="flex">
-                <p class="menuItem"><a href="#">Présentation</a></p>
-                <p class="ml-4 menuItem"><a href="#">Caractéristiques</a></p>
-                <p class="ml-4 menuItem"><a href="#">Prix</a></p>
-                <p class="ml-4 menuItem"><a href="#">Contact</a></p>
+                <p class="menuItem"><a href="#features1">Présentation</a></p>
+                <p class="ml-4 menuItem"><a href="#features2">Caractéristiques</a></p>
+                <p class="ml-4 menuItem"><a href="#price">Prix</a></p>
+                <p class="ml-4 menuItem"><a href="#contact">Contact</a></p>
             </div>
 
         </div>
@@ -61,12 +62,12 @@
 
     <nav id="menuMobile" class="lg:hidden z-50 bg-white min-h-allScreen absolute w-full py-8 px-4"> <!-- Mobile -->
 
-            <div class="flex justify-center mt-32 font-bold">
+            <div class="flex justify-center mt-8 font-bold">
                 <div class="text-2xl">
-                    <p id="optionsMobile1"><a href="#">Présentation</a></p>
-                    <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
-                    <p id="optionsMobile3" class="my-4"><a href="#">Prix</a></p>
-                    <p id="optionsMobile4"><a href="#">Contact</a></p>
+                    <p id="optionsMobile1"><a href="#features1">Présentation</a></p>
+                    <p id="optionsMobile2" class="my-4"><a href="#features2">Caractéristiques</a></p>
+                    <p id="optionsMobile3" class="my-4"><a href="#price">Prix</a></p>
+                    <p id="optionsMobile4"><a href="#contact">Contact</a></p>
                 </div>
             </div>
 
@@ -87,100 +88,100 @@
 
 <main class="flex flex-grow">
 
-    <div class="py-20">
+    <div class="w-full px-2 md:px-6 py-4 lg:py-12">
 
-                                    <div id="presentation" class="w-full bg-white overflow-hidden"> <! fast's app presentation />
+        <div id="presentation" class="w-full bg-white overflow-hidden lg:pb-8"> <! fast's app presentation />
 
-                                        <div class="flex justify-center  p-4  w-full">
-                                            <p class="text-gray-700 text-center font-extrabold">Lorem ipsum qdmokqsodk qosohdoqsdho qhsqokhd lqsshd lqshdlùqh <br> qsdùl hqssldh qkùslkdh qhsdù hqdsùlh </p>
-                                        </div>
+            <div class="flex justify-center  p-4  w-full">
+                <div class="flex justify-center font-bold text-2xl" id=container>
+                    <h2>L'application n°1 pour <span class="underline font-extrabold text-purple-middle p-2" id="textChange">discuter</span> n'attendez plus !</h2>
+                </div>
+            </div>
 
-                                        <div class="flex justify-center box-border p-4 w-full"> <!-- Button "Download" -->
-                                            <button class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full">
-                                                Obtenir l'application
-                                            </button>
-                                            <i class=" "></i>
-                                            <i class=""></i>
-                                        </div>
+            <div class="flex justify-center box-border p-4 w-full"> <!-- Button "Download" -->
+                <button class="bg-tinder hover:bg-purple-light text-white font-bold py-2 px-4 rounded-full">
+                    <a href="#download">Obtenir l'application</a>
+
+                </button>
+            </div>
 
                                     </div>
 
-                                    <div id="download" class="lg:flex w-full bg-white overflow-hidden"> <!-- to download the app -->
+        <div id="download" class="lg:flex w-full bg-svg-topo overflow-hidden p-12 mt-6 mb-6 rounded-lg"> <!-- to download the app -->
 
-                                        <div class="flex justify-center w-full lg:w-1/2 p-4">
+            <div class="flex justify-center w-full lg:w-1/2 p-4"> <!-- Android download -->
 
-                                            <div>
+                <div>
 
-                                                <div class="flex">
+                    <div class="flex">
 
-                                                    <i class="text-4xl icon-apple"></i>
+                        <i class="text-4xl text-white icon-apple"></i>
 
-                                                    <button class="bg-purple-middle m-2 mr-3 hover:bg-purple-light font-bold text-customWhite py-2 px-4 rounded inline-flex items-center">
+                        <a href="https://apps.apple.com/fr/app/tinder/id547702041" >
+                            <button class="bg-white m-2 mr-3 hover:bg-purple-light font-bold text-tinder py-2 px-4 rounded inline-flex items-center">
 
                                                         <svg class="fill-current w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
 
                                                         <span>Télécharger</span>
 
-                                                    </button>
-                                                </div>
+                            </button>
+                        </a>
+                    </div>
 
-                                            </div>
+                </div>
 
-                                        </div>
+            </div>
 
-                                        <div class="flex justify-center lg:w-1/2  p-4">
+            <div class="flex justify-center lg:w-1/2  p-4"> <!-- Apple download -->
 
-                                            <div class="flex">
+                <div class="flex">
 
-                                                <div class="flex justify-center">
-                                                    <i class="text-4xl icon-android"></i>
-                                                </div>
+                    <div class="flex justify-center">
+                        <i class="text-4xl text-white icon-android"></i>
+                    </div>
 
-                                                <div>
-                                                    <button class=" bg-purple-middle m-2 mr-3 hover:bg-purple-light font-bold text-customWhite py-2 px-4 rounded inline-flex items-center">
+                    <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" >
+                            <button class=" bg-white m-2 mr-3 hover:bg-purple-light font-bold text-tinder py-2 px-4 rounded inline-flex items-center">
 
                                                         <svg class="fill-current w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
 
                                                         <span>Télécharger</span>
 
-                                                    </button>
-                                                </div>
+                            </button>
+                        </a>
+                    </div>
 
-                                            </div>
+                </div>
 
-                                        </div>
-                                    </div>
+            </div>
+        </div>
 
 
                                     <div id="trigger-features"></div>   <!-- Trigger for scroll magic to reveal the features block -->
 
-                                    <div id="features" class="appear-features mt-4 px-6 sm:px-24 md:px-40 lg:px-6 lg:flex lg:justify-center lg:mt-20"> <!-- Features block -->
+        <div id="features" class="appear-features mt-4 lg:px-0 lg:flex lg:justify-center lg:mt-20"> <!-- Features block -->
 
                                         <div class="overflow-hidden lg:flex lg:justify-center">
 
-                                            <div>
-                                                <div class="lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
+                <div>
+                    <div id="features1" class="lg:flex lg:flex-row lg:justify-between p-2 lg:px-16 xl:px-32">
 
-                                                    <div class="w-full lg:w-3/5 xl:w-2/5">
-                                                        <img src="https://www.influenth.com/wp-content/uploads/2017/04/tinder.jpg" alt="caractéristiques" class="w-full h-full rounded-lg">
-                                                    </div>
+                        <div class="w-full lg:w-3/5 xl:w-2/5">
+                            <img src="./resources/images/cara.png" alt="caractéristiques" class="w-full h-full rounded-lg">
+                        </div>
 
                                                     <div class="p-2 text-justify lg:flex lg:items-center lg:px-10 lg:w-1/2">
 
                                                         <div>
 
-                                <h3 class="text-center text-4xl mb-6 lg:mt-6 font-bold">Présentation</h3>
+                                <h3 class="text-center text-2xl lg:text-4xl mb-6 lg:mt-6 font-bold uppercase tracking-wider">Présentation</h3>
 
                                 <p class="leading-1">
                                     Tinder a été lancé en mai 2012 par Sean Rad, Jonathan Badeen, Justin Mateen, Joe Munoz, Alexa Mateen, Dinesh Moorjani, et Whitney Wolfe Herd. 
                                     Le 2 mars 2015, Tinder a déployé une mise à jour majeure de son application : Tinder Plus. 
                                     L'application propose désormais une version gratuite, limitée à 50 likes par jour, et une version premium illimitée. 
-                                    Le 19 novembre 2015, Match Group qui possède Tinder a annoncé son entrée en bourse avec une action cotée à 12 dollars. 
-                                    En novembre 2016, Tinder s'engage avec l'association Gay & Lesbian Alliance Against Defamation pour offrir la possibilité aux personnes 
-                                    « qui s'identifient en tant que transgenre, ou quelque part entre les genres, ou en dehors, de la binarité des genres » de s'identifier 
-                                    à de nombreux genres dans l'application. 
-                                    En 2018, les revenus générés par Tinder sont estimés à 810 millions de dollars, c'est l’une des applications les plus rentables de l’App Store. 
-                                    En juillet 2019, l'application suspend son utilisation du système de paiement du Play Store.
+                                    Le 19 novembre 2015, Match Group qui possède Tinder a annoncé son entrée en bourse avec une action cotée à 12 dollars.
                                 </p>
 
                             </div>
@@ -189,35 +190,24 @@
                     </div>
 
 
-                    <div class="mt-12 lg:mt-0 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
+                    <div id="features2" class="mt-12 bg-svg-topo p-2 text-white rounded-lg lg:my-10 lg:py-20 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
 
                         <div class="w-full order-none lg:order-last lg:w-3/5 xl:w-2/5">
-                            <img src="https://www.onlineseduction.fr/wp-content/uploads/2019/03/rencontre-tinder-exemple-conversation-min.png" alt="caractéristiques" class="w-full h-full rounded-lg">
+                            <img src="./resources/images/heart.png" alt="caractéristiques" class="w-full h-full rounded-lg">
                         </div>
 
-                        <div class="p-2 text-justify lg:flex lg:items-center lg:px-10 lg:w-1/2">
+                        <div class="p-2 text-justify lg:flex lg:items-center lg:px-10 lg:w-1/2 shadow-2xl bg-tinder rounded-lg">
 
                             <div>
 
-                                <h3 class="text-center text-4xl mb-6 lg:mt-6 font-bold">Caractéristique</h3>
+                                <h3 class="text-center text-2xl lg:text-4xl mb-6 lg:mt-6 font-bold uppercase tracking-wider">Caractéristiques</h3>
 
                                 <p class="leading-1">
                                     L'application, qui s'inspire notamment de Grindr, fait défiler des profils d'utilisateurs sur plusieurs critères, 
                                     dont le sexe et la position géographique. L'utilisateur doit indiquer s'il les apprécie ou non en balayant l'écran 
                                     (ou « swiper ») vers la droite ou vers la gauche. Lorsque l'attraction est réciproque, les deux utilisateurs sont mis 
                                     en relation et peuvent échanger des messages. 
-                                    Le principe sous-jacent de l'application est de rendre l'utilisateur addictif. Pour cela elle s'appuie sur le principe 
-                                    de la récompense aléatoire découvert et théorisé par Burrhus Frederic Skinner, le psychologue américain qui a lancé le behaviorisme.
-                                    Cette récompense est ici d'abord induite par le plaisir esthétique de voir un beau visage ; plaisir qui induit un renforcement positif 
-                                    (associé à une sécrétion de dopamine dans le centre du plaisir, au coeur du cerveau), ...en encourageant la personne , sans qu'elle en 
-                                    ait vraiment conscience, à toujours swiper plus. En arrière plan, Tinder évalue - à l'insu de l'utilisateur - un score de désirabilité 
-                                    (plus une personne a de likes, plus sa note est élevée). L'algorithme ne présente pratiquement que des personnes ayant un score identique, 
-                                    sauf parfois (un peu comme au Casino, la machine à sous, permet de gagner pour relancer la motivation du joueur. Après un certain temps ce
-                                    n'est plus la vue de la photo qui génère de la dopamine, mais le simple geste du doigt qui swipe... L'utilisateur est en quelque sorte piége. 
-                                    L'application récolte des données personnelles, dont de positionnement géographique et de préférences individuelles. 
-                                    La version « Tinder Plus », payante, propose deux fonctions supplémentaires : « Passeport » et « Swype ». A début, 
-                                    une photo présentant une personne qui plait beau visage ou une personne qui active la partie du cerveau de la récompense, 
-                                    qui sécrète alors de la dopamine. 
+                                    Le principe sous-jacent de l'application est de rendre l'utilisateur addictif.
                                 </p>
 
                             </div>
@@ -227,17 +217,17 @@
 
 
 
-                    <div class="mt-12 lg:mt-0 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
+                    <div class="mt-12 p-2 lg:mt-0 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
 
                         <div class="w-full lg:w-3/5 xl:w-2/5">
-                            <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/38/1474534627-tinder-imessage-2.jpg?resize=480:*" alt="caractéristiques" class="w-full h-full rounded-lg">
+                            <img src="./resources/images/match2.jpg" alt="caractéristiques" class="w-full h-full rounded-lg">
                         </div>
 
                         <div class="p-2 text-justify lg:flex lg:items-center lg:px-10 lg:w-1/2">
 
                             <div>
 
-                                <h3 class="text-center text-4xl mb-6 lg:mt-6 font-bold">Nouveauté</h3>
+                                <h3 class="text-center text-2xl lg:text-4xl mb-6 lg:mt-6 font-bold uppercase tracking-wider">Nouveauté</h3>
 
                                 <p class="leading-1">
                                     Tinder, l’application qui vous permet de faire des rencontres en ligne. 
@@ -258,82 +248,219 @@
 
         </div>
 
-        <div id="price">
+        <div id="trigger-price"></div>
+        <div id="price" class="appear-price flex justify-center my-20 py-12 rounded-lg lg:mx-6 bg-svg-topo">
 
-            <div class="grid grid-rows-3 grid-flow-col gap-4 mx-40 my-10">
-                <div class="row-start-1 row-end-4">
-                    <div class="accordion text-3xl">Free (0€ /Mois)</div>
-                    <div class="panel">
-                        <div id="privilege" class="text-2xl">
-                            <p>Privilège de cette offre</p>
-                        </div>
-                        <div id="list_privilege">
-                            - 200 Likes par jour</br>
-                            - 5 Super Like </br>
-                            - 20 % de chance d'affichage du profil</br>
-                            - 3 Photos de profil</br>
-                            - Connection profil instagram</br>
-                        </div>
+            <div class="lg:flex lg:flex-row lg:justify-between w-full px-4 md:px-12">
+
+                <div class="lg:w-1/4 shadow-2xl rounded-lg border-b-4 border-l-4 border-r-4 border-white bg-tinder">   <!-- First Price -->
+
+                    <div class="accordion text-3xl bg-white text-tinder font-bold text-center cursor-pointer">
+                        Gratuit
                     </div>
-                </div>
-                <div class="row-start-1 row-end-4">
-                    <div class="accordion text-3xl">Premium (5€ /Mois)</div>
-                    <div class="panel">
-                        <div id="privilege" class="text-2xl">
-                            <p>Privilège de cette offre</p>
+
+                    <div class="text-md text-white w-full py-8 px-4 pt-8">
+
+                        <div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">200 likes par jour</p>
+                            </div>
+
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">5 Super Like</p>
+                            </div>
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">20 % de chance d'affichage du profil</p>
+                            </div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">3 Photos de profil</p>
+                            </div>
+
                         </div>
-                        <div id="list_privilege">
-                            - 500 Likes par jour </br>
-                            - 10 Super Like </br>
-                            - 70 % de chance d'affichage du profil</br>
-                            - 5 Photos de profil</br>
-                            - Connection profil instagram</br>
-                        </div>
+
                     </div>
-                </div>
-                <div class="row-start-1 row-end-4">
-                    <div class="accordion text-3xl">Gold (10€ /Mois)</div>
-                    <div class="panel">
-                        <div id="privilege" class="text-2xl">
-                            <p>Privilège de cette offre</p>
-                        </div>
-                        <div id="list_privilege">
-                            - Nb illimitésde likes par jour</br>
-                            - 20 Super Like </br>
-                            - 100 % de chance d'affichage du profil</br>
-                            - 8 photos de profil</br>
-                            - Connection profil instagram</br>
-                        </div>
+
+                </div>  <!-- End first Price -->
+
+                <div class="my-12 lg:my-0 lg:w-1/4 shadow-2xl rounded-lg border-b-4 border-l-4 border-r-4 border-white bg-tinder"> <!-- Second Price -->
+
+                    <div class="accordion text-3xl text-tinder font-bold text-center cursor-pointer bg-white">
+                        Premium
+                        <span class="text-sm">(5€ /Mois)</span>
                     </div>
-                </div>
+
+                    <div class="text-md text-white w-full py-8 px-4 pt-8">
+
+                        <div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">500 likes par jour</p>
+                            </div>
+
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">10 Super Like</p>
+                            </div>
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">70 % de chance d'affichage du profil</p>
+                            </div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">5 Photos de profil</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div> <!-- End Second Price -->
+
+                <div class="lg:w-1/4 shadow-2xl rounded-lg border-b-4 border-l-4 border-r-4 border-white bg-tinder"> <!-- Third Price -->
+
+                    <div class="accordion text-3xl text-tinder font-bold text-center cursor-pointer bg-white">
+                        Gold
+                        <span class="text-sm">(10€ /Mois)</span>
+                    </div>
+
+                    <div class="text-md text-white w-full py-8 px-4 pt-8">
+
+                        <div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">Nombres illimités de likes</p>
+                            </div>
+
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">20 Super Like</p>
+                            </div>
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">100 % de chance d'affichage du profil</p>
+                            </div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">8 Photos de profil</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div> <!-- End third price -->
+
             </div>
+
+
         </div>
 
         <div id="team">
 
         </div>
 
-        <div id="contact">
+        <div id="trigger-contact"></div>
+        <div id="contact" class="appear-contact text-tinder flex justify-center"> <!--contact information-->
+
+            <div>
+
+                <div class="flex justify-center border-b-2 border-tinder">
+                    <h1 class="font-bold text-3xl lg:text-5xl tracking-wide">Nous contacter</h1>
+                </div>
+
+                <div class="lg:flex lg:flex-row">
+
+                    <div class="flex justify-center p-16 lg:w-1/2 w-full"> <!-- phone -->
+
+                        <div>
+
+                            <div class="text-center">
+
+                                <div>
+                                    <a href="tel:+332589745569"><i class="icon-phone text-6xl"></i></a>
+                                </div>
+
+                                <p class="font-bold">+332589745569</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex justify-center p-16 lg:w-1/2 w-full"> <!-- mail -->
+                        <div>
+
+                            <div class="text-center">
+                                <div>
+                                    <a href="mailto:contact@tinder.com"><i class="icon-mail text-6xl"></i></a>
+                                </div>
+                                <p class="font-bold">contact@tinder.com</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
 
         </div>
 
     </div>
 </main>
+
+
 <!-- PARTIE QUENTIN DOPPLER -->
-<footer >
-    <div id="bande-footer" >
+<footer class="bg-tinder text-white text-sm py-8">
+
+    <div class="lg:flex lg:flex-row w-full justify-between lg:px-20">
 
         <!-- Partie téléchargement de l'application (situé en bas à gauche) -->
-        <div id ="partie-gauche" >
-           <p>
-                Télécharger l'application sur
-           </p>
-           <p>
-                <a href="https://apps.apple.com/fr/app/tinder/id547702041" ><i class="text-4xl icon-apple"></i></a>
-           </p>
-           <p>
-                <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" ><i class="text-4xl icon-android"></i></a>
-           </p>
+        <div>
+
+            <div class="text-center lg:text-left">
+
+                <p class="font-bold">
+                    Télécharger l'application
+                </p>
+
+            </div>
+
+            <div class="flex justify-center">
+
+                <div class="flex flex-row">
+
+                    <p>
+                        <a href="https://apps.apple.com/fr/app/tinder/id547702041" ><i class="text-4xl icon-apple"></i></a>
+                    </p>
+                    <p>
+                        <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" ><i class="text-4xl icon-android"></i></a>
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
 
 
@@ -343,42 +470,77 @@
 
 
         <!-- Partie détails de l'entreprise et autres infos (situé en bas au milieu) -->
-        <div id="partie-milieu" >
-            <p>
-                Entrepise
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/jobs?locale=fr">Emplois</a>
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/contact?locale=fr">Contact </a>
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/security?locale=fr">Protection des données </a>
-            </p>
-        </div>
-        <!-- Partie suivis des réseaux sociaux (situé en bas à droite) -->
-        <div id="partie-droite" >
-            <p>
-                Suivez-nous :
-            </p>
-            <p>
-                <a href="https://www.facebook.com/tinderfr/" > FACEBOOK </a>
-                <a href="https://www.instagram.com/tinder/" > INSTA </a>
-                <a href="#" > TWITTER </a>
-                <a href="https://www.youtube.com/Tinder" > YOUTUBE </a>
-            </p>
-        </div>
-    </div><br>
+        <div class="my-6 lg:my-0">
 
-    <!-- Partie politique de confidentialité avec le bouton qui génèrera une popup -->
-    <div id="condition" class="text-center border-t">
-        <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
-            <a href="conditionV2.html" >Politique de confidentialité - Condition d'utilisation</a>
-        </p>
+            <div class="flex flex-row justify-center">
+
+                <p class="ml-4">
+                    <a href="https://www.gotinder.com/jobs?locale=fr">Emplois</a>
+                </p>
+
+                <p class="ml-4">
+                    <a href="https://www.gotinder.com/contact?locale=fr">Contact </a>
+                </p>
+
+                <p class="ml-4">
+                    <a href="https://www.gotinder.com/security?locale=fr">Protection des données </a>
+                </p>
+
+            </div>
+
+
+                <div class="text-center mt-2">
+
+                    <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
+                        <a href="conditionV2.html" id="manual-ajax" >Politique de confidentialité - Condition d'utilisation</a>
+                    </p>
+
+                </div>
+
+            <div class="mt-2">
+                <p class="text-center">
+                    © All rights reserved.
+                </p>
+            </div>
+
+
+        </div>
+
+        <!-- Partie suivis des réseaux sociaux (situé en bas à droite) -->
+
+        <div class="flex justify-center">
+
+            <div>
+                <p class="font-bold text-center">
+                    Suivez-nous :
+                </p>
+
+                <p class="text-4xl">
+                    <a href="https://www.facebook.com/tinderfr/" ><i class="icon-facebook-squared"></i></a>
+                    <a href="https://www.instagram.com/tinder/" ><i class="icon-instagram"></i></a>
+                    <a href="#" ><i class="icon-twitter"></i></a>
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
 
+<script>
+// Word change automaticly every 1 sec
+    var text = ["Discuter", "Matcher", "Rencontrer"];
+    var counter = 0;
+    var elem = document.getElementById("textChange");
+    var inst = setInterval(change, 1000);
+
+    function change() {
+        elem.innerHTML = text[counter];
+        counter++;
+        if (counter >= text.length) {
+            counter = 0;
+        }
+    }
+
+</script>
 <script>
     var acc = document.getElementsByClassName("accordion");
     var i;

@@ -1,8 +1,6 @@
 $(function () { // wait for document ready
 
-    var scrollAnim = ['#features'];
-
-    console.log(scrollAnim.length);
+    var scrollAnim = ['features', 'price', 'contact'];
 
     gsap.from("body", {x: -2000, duration: 0.8});
     let tl = gsap.timeline();
@@ -39,7 +37,7 @@ $(function () { // wait for document ready
             offset: 50, // move trigger to center of element
             reverse: false
         })
-            .setClassToggle(scrollAnim[i], "visible") // add class to reveal
+            .setClassToggle('#' + scrollAnim[i], "visible") // add class to reveal
             .addTo(controller);
     }
 
@@ -53,4 +51,16 @@ $(function () { // wait for document ready
             window.scrollTo(0, scrollPosition - scrollPosition / 12); // position, smooth
         }
     };
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+
 });

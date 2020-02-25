@@ -2,7 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Site Cesi</title>
+
+    <meta name="description" content="Application de rencontre">
+    <meta name="keywords" content="Love,Amour,Rencontre">
+    <meta name="author" content="BreizhTek">
+
+    <title>Tinder</title>
+    <link rel="icon" href="/resources/images/icontinder.ico">
+
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./resources/fontello/css/fontello.css">
 
@@ -18,86 +25,10 @@
 </head>
 <body class="bg-white min-h-screen flex flex-col text-tinder">
 
-<div class="fixed bottom-0 right-0">
-    <button onclick="backToTop()" id="btnUp" class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full" title="Back to top">TOP</button> <!-- Button to back to top of the page -->
-</div>
-
-<header class="border-b border-white text-center flex-col text-tinder">
-
-    <div class="flex flex-row items-center bg-white justify-between w-full p-4 lg:px-12 lg:py-4">
-
-        <div class="h-16 lg:h-24 rounded-full overflow-hidden">
-            <img src="./resources/images/tinder.png" alt="Logo" class="object-cover w-full h-full">
-        </div>
-
-        <div>
-            <h1 class="uppercase text-3xl font-bold">Tinder</h1>
-        </div>
-
-        <div class="lg:hidden">
-            <i id="Open" class="icon-menu cursor-pointer text-2xl"></i>
-            <i id="Close" class="icon-cancel icon- icon-cancel cursor-pointer text-2xl hidden"></i>
-        </div>
-
-        <div class="hidden lg:block font-bold">
-
-            <div class="flex">
-                <p class="menuItem"><a href="#">Présentation</a></p>
-                <p class="ml-4 menuItem"><a href="#">Caractéristiques</a></p>
-                <p class="ml-4 menuItem"><a href="#">Prix</a></p>
-                <p class="ml-4 menuItem"><a href="#">Contact</a></p>
-            </div>
-
-        </div>
-
-    </div>
-
-    <nav id="menuMobile" class="lg:hidden z-50 bg-white min-h-allScreen absolute w-full py-8 px-4"> <!-- Mobile -->
-
-        <div class="flex justify-center mt-32 font-bold">
-            <div class="text-2xl">
-                <p id="optionsMobile1"><a href="#">Présentation</a></p>
-                <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
-                <p id="optionsMobile3" class="my-4"><a href="#">Prix</a></p>
-                <p id="optionsMobile4"><a href="#">Contact</a></p>
-            </div>
-        </div>
-
-
-    </nav>
-
-    <nav class="hidden lg:block"> <!-- Desktop -->
-
-    </nav>
-
-</header>
-
-
-
-
-
-
-
 <main class="flex flex-grow">
 
     <div class="py-20 mx-40">
 
-        <div id="presentation" class="w-full bg-white overflow-hidden"> <! fast's app presentation />
-
-            <div class="flex justify-center  p-4  w-full">
-                <p class="text-gray-700 text-center font-extrabold">Lorem ipsum qdmokqsodk qosohdoqsdho qhsqokhd lqsshd lqshdlùqh <br> qsdùl hqssldh qkùslkdh qhsdù hqdsùlh </p>
-            </div>
-
-            <div class="flex justify-center box-border p-4 w-full"> <!-- Button "Download" -->
-                <button class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full">
-                    Obtenir l'application
-                </button>
-                <i class=" "></i>
-                <i class=""></i>
-            </div>
-
-        </div>
-        <!--  -->
         <div>
             <h3 class="text-4xl mb-6 lg:mt-6 font-bold"> Condition d'utilisation : </h3>
             <p>
@@ -671,64 +602,6 @@
         </div>
     </div>
 </main>
-
-
-
-
-
-<!-- PARTIE QUENTIN DOPPLER -->
-<footer >
-    <div id="bande-footer" >
-
-        <!-- Partie téléchargement de l'application (situé en bas à gauche) -->
-        <div id ="partie-gauche" >
-            <p>
-                Télécharger l'application sur
-            </p>
-            <p>
-                <a href="https://apps.apple.com/fr/app/tinder/id547702041" ><i class="text-4xl icon-apple"></i></a>
-            </p>
-            <p>
-                <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" ><i class="text-4xl icon-android"></i></a>
-            </p>
-        </div>
-
-        <!-- Partie détails de l'entreprise et autres infos (situé en bas au milieu) -->
-        <div id="partie-milieu" >
-            <p>
-                Entrepise
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/jobs?locale=fr">Emplois</a>
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/contact?locale=fr">Contact </a>
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/security?locale=fr">Protection des données </a>
-            </p>
-        </div>
-        <!-- Partie suivis des réseaux sociaux (situé en bas à droite) -->
-        <div id="partie-droite" >
-            <p>
-                Suivez-nous :
-            </p>
-            <p>
-                <a href="https://www.facebook.com/tinderfr/" > FACEBOOK </a>
-                <a href="https://www.instagram.com/tinder/" > INSTA </a>
-                <a href="#" > TWITTER </a>
-                <a href="https://www.youtube.com/Tinder" > YOUTUBE </a>
-            </p>
-        </div>
-    </div><br>
-
-    <!-- Partie politique de confidentialité avec le bouton qui génèrera une popup -->
-    <div id="condition" class="text-center border-t">
-        <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
-            <a href="condition.html" id="manual-ajax" >Politique de confidentialité - Condition d'utilisation</a>
-        </p>
-    </div>
-</footer>
 
 </body>
 </html>
