@@ -13,7 +13,13 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="resources/js/animations.js"></script>
 
-
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion({
+            collapsible: true
+            });
+        } );
+  </script>
 </head>
 <body class="bg-white min-h-screen flex flex-col text-tinder">
 
@@ -151,7 +157,6 @@
             <div class="overflow-hidden lg:flex lg:justify-center">
 
                 <div>
-
                     <div class="lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
 
                         <div class="w-full lg:w-3/5 xl:w-2/5">
@@ -178,7 +183,7 @@
                     </div>
 
 
-                    <div class="mt-12 lg:flex lg:flex-row lg:justify-between lg:my-20 lg:px-16 xl:px-32">
+                    <div class="mt-12 lg:mt-0 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
 
                         <div class="w-full order-none lg:order-last lg:w-3/5 xl:w-2/5">
                             <img src="https://placemonkeys.com/1200" alt="caractéristiques" class="w-full h-full rounded-lg">
@@ -229,18 +234,17 @@
 
                         </div>
                     </div>
-
                 </div>
 
             </div>
-            
+
 
 
         </div>
 
         <div id="price">
 
-           <!-- <div class="grid grid-rows-3 grid-flow-col gap-4 mx-40 my-10">
+            <div class="grid grid-rows-3 grid-flow-col gap-4 mx-40 my-10">
                 <div class="row-start-1 row-end-4">
                     <div class="accordion text-3xl">Free (0€ /Mois)</div>
                     <div class="panel">
@@ -286,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
 
         <div id="team">
@@ -297,6 +301,7 @@
 
         </div>
 
+    </div>
     </div>
 </main>
 
@@ -310,5 +315,21 @@
 <footer class="border-t border-white text-center">
     FOOTER
 </footer>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 </body>
 </html>
