@@ -1,8 +1,6 @@
 $(function () { // wait for document ready
 
-    var scrollAnim = ['features', 'price'];
-
-    console.log(scrollAnim.length);
+    var scrollAnim = ['features', 'price', 'contact'];
 
     gsap.from("body", {x: -2000, duration: 0.8});
     let tl = gsap.timeline();
@@ -63,4 +61,6 @@ $(function () { // wait for document ready
             });
         });
     });
+
+
 });

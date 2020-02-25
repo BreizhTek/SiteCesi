@@ -12,7 +12,10 @@ module.exports = {
       },
       minHeight: {
         allScreen: '200vh',
-      }
+      },
+      rotate: {
+        '360': '360deg',
+      },
     },
   },
   variants: {},
