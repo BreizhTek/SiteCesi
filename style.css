@@ -13665,6 +13665,10 @@ video {
   transition-duration: 1000ms;
 }
 
+body{
+  font-family: 'Quicksand', 'sans-serif';
+}
+
 .menuItem {
   border-bottom-width: 2px;
   border-color: transparent;
@@ -65860,9 +65864,4 @@ video {
   .xl\:duration-1000 {
     transition-duration: 1000ms;
   }
-
-
-
-
-
 }

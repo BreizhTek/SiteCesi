@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Site Cesi</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./resources/fontello/css/fontello.css">
 
@@ -23,8 +25,8 @@
 </head>
 <body class="bg-white min-h-screen flex flex-col text-tinder">
 
-<div class="fixed bottom-0 right-0">
-    <button onclick="backToTop()" id="btnUp" class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full" title="Back to top">TOP</button> <!-- Button to back to top of the page -->
+<div class="hidden lg:block fixed mb-40 mr-4 bottom-0 right-0">
+    <button onclick="backToTop()" id="btnUp" class="bg-tinder hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full" title="Back to top"><i class="icon-up-big"></i></button> <!-- Button to back to top of the page -->
 </div>
 
 <header class="border-b border-white text-center flex-col text-tinder">
@@ -47,10 +49,10 @@
         <div class="hidden lg:block font-bold">
 
             <div class="flex">
-                <p class="menuItem"><a href="#">Présentation</a></p>
-                <p class="ml-4 menuItem"><a href="#">Caractéristiques</a></p>
-                <p class="ml-4 menuItem"><a href="#">Prix</a></p>
-                <p class="ml-4 menuItem"><a href="#">Contact</a></p>
+                <p class="menuItem"><a href="#presentation">Présentation</a></p>
+                <p class="ml-4 menuItem"><a href="#features">Caractéristiques</a></p>
+                <p class="ml-4 menuItem"><a href="#price">Prix</a></p>
+                <p class="ml-4 menuItem"><a href="#contact">Contact</a></p>
             </div>
 
         </div>
@@ -59,7 +61,7 @@
 
     <nav id="menuMobile" class="lg:hidden z-50 bg-white min-h-allScreen absolute w-full py-8 px-4"> <!-- Mobile -->
 
-            <div class="flex justify-center mt-32 font-bold">
+            <div class="flex justify-center mt-8 font-bold">
                 <div class="text-2xl">
                     <p id="optionsMobile1"><a href="#">Présentation</a></p>
                     <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
@@ -187,7 +189,7 @@
                     </div>
 
 
-                    <div class="mt-12 lg:mt-0 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
+                    <div class="mt-12 bg-tinder text-white rounded-lg lg:my-10 lg:py-20 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
 
                         <div class="w-full order-none lg:order-last lg:w-3/5 xl:w-2/5">
                             <img src="https://www.onlineseduction.fr/wp-content/uploads/2019/03/rencontre-tinder-exemple-conversation-min.png" alt="caractéristiques" class="w-full h-full rounded-lg">
@@ -257,17 +259,17 @@
         </div>
 
         <div id="trigger-price"></div>
-        <div id="price" class="appear-price flex justify-center my-20">
+        <div id="price" class="appear-price flex justify-center my-20 py-12 rounded-lg lg:mx-6 bg-tinder">
 
             <div class="lg:flex lg:flex-row lg:justify-between w-full px-6 lg:px-40">
 
-                <div class="lg:w-1/4">   <!-- First Price -->
+                <div class="lg:w-1/4 shadow-2xl">   <!-- First Price -->
 
-                    <div class="accordion text-3xl text-white font-bold text-center cursor-pointer bg-tinder rounded-t-lg">
+                    <div class="accordion text-3xl bg-white text-tinder font-bold text-center cursor-pointer rounded-t-lg">
                         Gratuit
                     </div>
 
-                    <div class="text-md w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-tinder">
+                    <div class="text-md text-white w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-white">
 
                         <div>
 
@@ -298,14 +300,14 @@
 
                 </div>  <!-- End first Price -->
 
-                <div class="my-12 lg:my-0 lg:w-1/4"> <!-- Second Price -->
+                <div class="my-12 lg:my-0 lg:w-1/4 shadow-2xl"> <!-- Second Price -->
 
-                    <div class="accordion text-3xl text-white font-bold text-center cursor-pointer bg-tinder rounded-t-lg">
+                    <div class="accordion text-3xl text-tinder font-bold text-center cursor-pointer bg-white rounded-t-lg">
                         Premium
                         <span class="text-sm">(5€ /Mois)</span>
                     </div>
 
-                    <div class="text-md w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-tinder">
+                    <div class="text-md text-white w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-white">
 
                         <div>
 
@@ -336,20 +338,20 @@
                     </div>
                 </div> <!-- End Second Price -->
 
-                <div class="lg:w-1/4"> <!-- Third Price -->
+                <div class="lg:w-1/4 shadow-2xl"> <!-- Third Price -->
 
-                    <div class="accordion text-3xl text-white font-bold text-center cursor-pointer bg-tinder rounded-t-lg">
+                    <div class="accordion text-3xl text-tinder font-bold text-center cursor-pointer bg-white rounded-t-lg">
                         Gold
                         <span class="text-sm">(10€ /Mois)</span>
                     </div>
 
-                    <div class="text-md w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-tinder">
+                    <div class="text-md text-white w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-white">
 
                         <div>
 
                             <div class="flex flex-row">
                                 <i class="icon-ok"></i>
-                                <p class="ml-2">Nombres illimités de likes par jour</p>
+                                <p class="ml-2">Nombres illimités de likes</p>
                             </div>
 
 
@@ -390,21 +392,39 @@
 
     </div>
 </main>
+
+
 <!-- PARTIE QUENTIN DOPPLER -->
-<footer >
-    <div id="bande-footer" >
+<footer class="bg-tinder text-white text-sm py-8">
+
+    <div class="lg:flex lg:flex-row w-full justify-between lg:px-20">
 
         <!-- Partie téléchargement de l'application (situé en bas à gauche) -->
-        <div id ="partie-gauche" >
-           <p>
-                Télécharger l'application sur
-           </p>
-           <p>
-                <a href="https://apps.apple.com/fr/app/tinder/id547702041" ><i class="text-4xl icon-apple"></i></a>
-           </p>
-           <p>
-                <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" ><i class="text-4xl icon-android"></i></a>
-           </p>
+        <div>
+
+            <div class="text-center">
+
+                <p class="font-bold">
+                    Télécharger l'application
+                </p>
+
+            </div>
+
+            <div class="flex justify-center">
+
+                <div class="flex flex-row">
+
+                    <p>
+                        <a href="https://apps.apple.com/fr/app/tinder/id547702041" ><i class="text-4xl icon-apple"></i></a>
+                    </p>
+                    <p>
+                        <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" ><i class="text-4xl icon-android"></i></a>
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
 
 
@@ -414,40 +434,63 @@
 
 
         <!-- Partie détails de l'entreprise et autres infos (situé en bas au milieu) -->
-        <div id="partie-milieu" >
-            <p>
-                Entrepise
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/jobs?locale=fr">Emplois</a>
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/contact?locale=fr">Contact </a>
-            </p>
-            <p>
-                <a href="https://www.gotinder.com/security?locale=fr">Protection des données </a>
-            </p>
-        </div>
-        <!-- Partie suivis des réseaux sociaux (situé en bas à droite) -->
-        <div id="partie-droite" >
-            <p>
-                Suivez-nous :
-            </p>
-            <p>
-                <a href="https://www.facebook.com/tinderfr/" > FACEBOOK </a>
-                <a href="https://www.instagram.com/tinder/" > INSTA </a>
-                <a href="#" > TWITTER </a>
-                <a href="https://www.youtube.com/Tinder" > YOUTUBE </a>
-            </p>
-        </div>
-    </div><br>
+        <div class="my-6 lg:my-0">
 
-    <!-- Partie politique de confidentialité avec le bouton qui génèrera une popup -->
-    <div id="condition" class="text-center border-t">
-        <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
-            <a href="condition.html" id="manual-ajax" >Politique de confidentialité - Condition d'utilisation</a>
-        </p>
+            <div class="flex flex-row justify-center">
+
+                <p class="ml-4">
+                    <a href="https://www.gotinder.com/jobs?locale=fr">Emplois</a>
+                </p>
+
+                <p class="ml-4">
+                    <a href="https://www.gotinder.com/contact?locale=fr">Contact </a>
+                </p>
+
+                <p class="ml-4">
+                    <a href="https://www.gotinder.com/security?locale=fr">Protection des données </a>
+                </p>
+
+            </div>
+
+
+                <div class="text-center mt-2">
+
+                    <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
+                        <a href="condition.html" id="manual-ajax" >Politique de confidentialité / Condition d'utilisation</a>
+                    </p>
+
+                </div>
+
+            <div class="mt-2">
+                <p class="text-center">
+                    © All rights reserved.
+                </p>
+            </div>
+
+
+        </div>
+
+        <!-- Partie suivis des réseaux sociaux (situé en bas à droite) -->
+
+        <div class="flex justify-center">
+
+            <div>
+                <p class="font-bold text-center">
+                    Suivez-nous :
+                </p>
+
+                <p class="text-4xl">
+                    <a href="https://www.facebook.com/tinderfr/" ><i class="icon-facebook-squared"></i></a>
+                    <a href="https://www.instagram.com/tinder/" ><i class="icon-instagram"></i></a>
+                    <a href="#" ><i class="icon-twitter"></i></a>
+                </p>
+            </div>
+
+
+        </div>
+
     </div>
+
 </footer>
 
 <script>

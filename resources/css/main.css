@@ -4,6 +4,11 @@
 
 @tailwind utilities;
 
+
+body{
+    font-family: 'Quicksand', 'sans-serif';
+}
+
 .menuItem {
     @apply border-b-2 border-transparent;
 }

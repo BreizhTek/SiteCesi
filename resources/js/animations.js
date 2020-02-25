@@ -53,4 +53,14 @@ $(function () { // wait for document ready
             window.scrollTo(0, scrollPosition - scrollPosition / 12); // position, smooth
         }
     };
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
