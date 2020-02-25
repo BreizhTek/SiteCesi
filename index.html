@@ -2,7 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Site Cesi</title>
+
+    <meta name="description" content="Application de rencontre">
+    <meta name="keywords" content="Love,Amour,Rencontre">
+    <meta name="author" content="BreizhTek">
+
+    <title>Tinder</title>
+    <link rel="icon" href="/resources/images/icontinder.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
@@ -49,8 +55,8 @@
         <div class="hidden lg:block font-bold">
 
             <div class="flex">
-                <p class="menuItem"><a href="#presentation">Présentation</a></p>
-                <p class="ml-4 menuItem"><a href="#features">Caractéristiques</a></p>
+                <p class="menuItem"><a href="#features1">Présentation</a></p>
+                <p class="ml-4 menuItem"><a href="#features2">Caractéristiques</a></p>
                 <p class="ml-4 menuItem"><a href="#price">Prix</a></p>
                 <p class="ml-4 menuItem"><a href="#contact">Contact</a></p>
             </div>
@@ -63,10 +69,10 @@
 
             <div class="flex justify-center mt-8 font-bold">
                 <div class="text-2xl">
-                    <p id="optionsMobile1"><a href="#">Présentation</a></p>
-                    <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
-                    <p id="optionsMobile3" class="my-4"><a href="#">Prix</a></p>
-                    <p id="optionsMobile4"><a href="#">Contact</a></p>
+                    <p id="optionsMobile1"><a href="#features1">Présentation</a></p>
+                    <p id="optionsMobile2" class="my-4"><a href="#features2">Caractéristiques</a></p>
+                    <p id="optionsMobile3" class="my-4"><a href="#price">Prix</a></p>
+                    <p id="optionsMobile4"><a href="#contact">Contact</a></p>
                 </div>
             </div>
 
@@ -164,7 +170,7 @@
             <div class="overflow-hidden lg:flex lg:justify-center">
 
                 <div>
-                    <div class="lg:flex lg:flex-row lg:justify-between p-2 lg:px-16 xl:px-32">
+                    <div id="features1" class="lg:flex lg:flex-row lg:justify-between p-2 lg:px-16 xl:px-32">
 
                         <div class="w-full lg:w-3/5 xl:w-2/5">
                             <img src="./resources/images/cara.png" alt="caractéristiques" class="w-full h-full rounded-lg">
@@ -189,7 +195,7 @@
                     </div>
 
 
-                    <div class="mt-12 bg-svg-topo p-2 text-white rounded-lg lg:my-10 lg:py-20 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
+                    <div id="features2" class="mt-12 bg-svg-topo p-2 text-white rounded-lg lg:my-10 lg:py-20 lg:flex lg:flex-row lg:justify-between lg:px-16 xl:px-32">
 
                         <div class="w-full order-none lg:order-last lg:w-3/5 xl:w-2/5">
                             <img src="./resources/images/heart.png" alt="caractéristiques" class="w-full h-full rounded-lg">
@@ -380,8 +386,8 @@
 
             <div>
 
-                <div class="flex justify-center">
-                    <h1 class="underline font-bold text-3xl lg:text-5xl">Nous contacter</h1>
+                <div class="flex justify-center border-b-2 border-tinder">
+                    <h1 class="font-bold text-3xl lg:text-5xl tracking-wide">Nous contacter</h1>
                 </div>
 
                 <div class="lg:flex lg:flex-row">
@@ -491,7 +497,7 @@
                 <div class="text-center mt-2">
 
                     <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
-                        <a href="condition.html" id="manual-ajax" >Politique de confidentialité / Condition d'utilisation</a>
+                        <a href="condition.html" id="manual-ajax" >Politique de confidentialité - Condition d'utilisation</a>
                     </p>
 
                 </div>
