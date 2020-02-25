@@ -34,7 +34,7 @@ $(function () { // wait for document ready
     {
         new ScrollMagic.Scene({
             triggerElement: "#trigger-"+scrollAnim[i],
-            offset: 0, // move trigger to center of element
+            offset: 10, // move trigger to center of element
             reverse: false
         })
             .setClassToggle('#' + scrollAnim[i], "visible") // add class to reveal
