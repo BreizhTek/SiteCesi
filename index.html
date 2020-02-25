@@ -13,13 +13,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="resources/js/animations.js"></script>
 
-    <script>
-        $( function() {
-            $( "#accordion" ).accordion({
-            collapsible: true
-            });
-        } );
-  </script>
 </head>
 <body class="bg-white min-h-screen flex flex-col text-tinder">
 
@@ -242,55 +235,128 @@
 
         </div>
 
-        <div id="price">
+        <div id="trigger-price"></div>
+        <div id="price" class="appear-price flex justify-center my-20">
 
-            <div class="grid grid-rows-3 grid-flow-col gap-4 mx-40 my-10">
-                <div class="row-start-1 row-end-4">
-                    <div class="accordion text-3xl">Free (0€ /Mois)</div>
-                    <div class="panel">
-                        <div id="privilege" class="text-2xl">
-                            <p>Privilège de cette offre</p>
-                        </div>
-                        <div id="list_privilege">
-                            - 200 Likes par jour</br>
-                            - 5 Super Like </br>
-                            - 20 % de chance d'affichage du profil</br>
-                            - 3 Photos de profil</br>
-                            - Connection profil instagram</br>
-                        </div>
+            <div class="lg:flex lg:flex-row lg:justify-between w-full px-6 lg:px-40">
+
+                <div class="lg:w-1/4">   <!-- First Price -->
+
+                    <div class="accordion text-3xl text-white font-bold text-center cursor-pointer bg-tinder rounded-t-lg">
+                        Gratuit
                     </div>
-                </div>
-                <div class="row-start-1 row-end-4">
-                    <div class="accordion text-3xl">Premium (5€ /Mois)</div>
-                    <div class="panel">
-                        <div id="privilege" class="text-2xl">
-                            <p>Privilège de cette offre</p>
+
+                    <div class="text-md w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-tinder">
+
+                        <div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">200 likes par jour</p>
+                            </div>
+
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">5 Super Like</p>
+                            </div>
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">20 % de chance d'affichage du profil</p>
+                            </div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">3 Photos de profil</p>
+                            </div>
+
                         </div>
-                        <div id="list_privilege">
-                            - 500 Likes par jour </br>
-                            - 10 Super Like </br>
-                            - 70 % de chance d'affichage du profil</br>
-                            - 5 Photos de profil</br>
-                            - Connection profil instagram</br>
-                        </div>
+
                     </div>
-                </div>
-                <div class="row-start-1 row-end-4">
-                    <div class="accordion text-3xl">Gold (10€ /Mois)</div>
-                    <div class="panel">
-                        <div id="privilege" class="text-2xl">
-                            <p>Privilège de cette offre</p>
-                        </div>
-                        <div id="list_privilege">
-                            - Nb illimitésde likes par jour</br>
-                            - 20 Super Like </br>
-                            - 100 % de chance d'affichage du profil</br>
-                            - 8 photos de profil</br>
-                            - Connection profil instagram</br>
-                        </div>
+
+                </div>  <!-- End first Price -->
+
+                <div class="my-12 lg:my-0 lg:w-1/4"> <!-- Second Price -->
+
+                    <div class="accordion text-3xl text-white font-bold text-center cursor-pointer bg-tinder rounded-t-lg">
+                        Premium
+                        <span class="text-sm">(5€ /Mois)</span>
                     </div>
-                </div>
+
+                    <div class="text-md w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-tinder">
+
+                        <div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">500 likes par jour</p>
+                            </div>
+
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">10 Super Like</p>
+                            </div>
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">70 % de chance d'affichage du profil</p>
+                            </div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">5 Photos de profil</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div> <!-- End Second Price -->
+
+                <div class="lg:w-1/4"> <!-- Third Price -->
+
+                    <div class="accordion text-3xl text-white font-bold text-center cursor-pointer bg-tinder rounded-t-lg">
+                        Gold
+                        <span class="text-sm">(10€ /Mois)</span>
+                    </div>
+
+                    <div class="text-md w-full py-8 px-4 pt-8 rounded-b-lg border-b-4 border-l-4 border-r-4 border-tinder">
+
+                        <div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">Nombres illimités de likes par jour</p>
+                            </div>
+
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">20 Super Like</p>
+                            </div>
+
+                            <div class="flex flex-row my-2">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">100 % de chance d'affichage du profil</p>
+                            </div>
+
+                            <div class="flex flex-row">
+                                <i class="icon-ok"></i>
+                                <p class="ml-2">8 Photos de profil</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div> <!-- End third price -->
+
             </div>
+
+
         </div>
 
         <div id="team">

@@ -13686,13 +13686,6 @@ video {
   transform: none;
 }
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
