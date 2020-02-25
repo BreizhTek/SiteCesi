@@ -28,6 +28,13 @@ $(function () { // wait for document ready
         $('#menuMobile').hide();
     })
 
+    $('.mobileLink').click(function () {
+        $('body').removeClass('overflow-hidden');
+        $('#Close').addClass('hidden');
+        $('#Open').removeClass('hidden');
+        $('#menuMobile').hide();
+    })
+
     var controller = new ScrollMagic.Controller();
 
     for (let i = 0; i < scrollAnim.length; i++)
