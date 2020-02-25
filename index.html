@@ -175,44 +175,50 @@
 
         <div id="price">
             
-            <div id="accordion">
-                <h2 class="text-2xl">Free (0€ /Mois)</h2>
-                <div>
-                    <div id="privilege">
-                        <p>Privilège de cette offre</p>
-                    </div>
-                    <div id="list_privilege">
-                        - 200 Likes par jour</br>
-                        - 5 Super Like </br>
-                        - 20 % de chance d'affichage du profil</br>
-                        - 3 Photos de profil</br>
-                        - Connection profil instagram</br>
-                    </div>
-                </div>
-                <h2 class="text-2xl">Premium (5€ /Mois)</h2>
-                <div>
-                    <div id="privilege">
-                        <p>Privilège de cette offre</p>
-                    </div>
-                    <div id="list_privilege">
-                        - 500 Likes par jour </br>
-                        - 10 Super Like </br>
-                        - 70 % de chance d'affichage du profil</br>
-                        - 5 Photos de profil</br>
-                        - Connection profil instagram</br>
+            <div class="grid grid-rows-3 grid-flow-col gap-4 mx-40 my-10">
+                <div class="row-start-1 row-end-4">
+                    <div class="accordion text-3xl">Free (0€ /Mois)</div>
+                    <div class="panel">
+                        <div id="privilege" class="text-2xl">
+                            <p>Privilège de cette offre</p>
+                        </div>
+                        <div id="list_privilege">
+                            - 200 Likes par jour</br>
+                            - 5 Super Like </br>
+                            - 20 % de chance d'affichage du profil</br>
+                            - 3 Photos de profil</br>
+                            - Connection profil instagram</br>
+                        </div>
                     </div>
                 </div>
-                <h2 class="text-2xl">Gold (10€ /Mois)</h2>
-                <div>
-                    <div id="privilege">
-                        <p>Privilège de cette offre</p>
+                <div class="row-start-1 row-end-4">
+                    <div class="accordion text-3xl">Premium (5€ /Mois)</div>
+                    <div class="panel">
+                        <div id="privilege" class="text-2xl">
+                            <p>Privilège de cette offre</p>
+                        </div>
+                        <div id="list_privilege">
+                            - 500 Likes par jour </br>
+                            - 10 Super Like </br>
+                            - 70 % de chance d'affichage du profil</br>
+                            - 5 Photos de profil</br>
+                            - Connection profil instagram</br>
+                        </div>
                     </div>
-                    <div id="list_privilege">
-                        - Nb illimitésde likes par jour</br>
-                        - 20 Super Like </br>
-                        - 100 % de chance d'affichage du profil</br>
-                        - 8 photos de profil</br>
-                        - Connection profil instagram</br>
+                </div>
+                <div class="row-start-1 row-end-4">
+                    <div class="accordion text-3xl">Gold (10€ /Mois)</div>
+                    <div class="panel">
+                        <div id="privilege" class="text-2xl">
+                            <p>Privilège de cette offre</p>
+                        </div>
+                        <div id="list_privilege">
+                            - Nb illimitésde likes par jour</br>
+                            - 20 Super Like </br>
+                            - 100 % de chance d'affichage du profil</br>
+                            - 8 photos de profil</br>
+                            - Connection profil instagram</br>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,6 +231,7 @@
 
         </div>
 
+    </div>
     </div>
 </main>
 
@@ -267,6 +274,22 @@
             $('#menuMobile').hide();
     })
 
+</script>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 </script>
 </body>
 </html>
