@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Cesi</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./resources/fontello/css/fontello.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+    <script src="resources/js/animations.js"></script>
+</head>
+<body class="bg-white min-h-screen flex flex-col text-tinder">
+
+<div class="fixed bottom-0 right-0">
+    <button onclick="backToTop()" id="btnUp" class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full" title="Back to top">TOP</button> <!-- Button to back to top of the page -->
+</div>
+
+<header class="border-b border-white text-center flex-col text-tinder">
+
+    <div class="flex flex-row items-center bg-white justify-between w-full p-4 lg:px-12 lg:py-4">
+
+        <div class="h-16 lg:h-24 rounded-full overflow-hidden">
+            <img src="./resources/images/tinder.png" alt="Logo" class="object-cover w-full h-full">
+        </div>
+
+        <div>
+            <h1 class="uppercase text-3xl font-bold">Tinder</h1>
+        </div>
+
+        <div class="lg:hidden">
+            <i id="Open" class="icon-menu cursor-pointer text-2xl"></i>
+            <i id="Close" class="icon-cancel icon- icon-cancel cursor-pointer text-2xl hidden"></i>
+        </div>
+
+        <div class="hidden lg:block font-bold">
+
+            <div class="flex">
+                <p class="menuItem"><a href="#">Présentation</a></p>
+                <p class="ml-4 menuItem"><a href="#">Caractéristiques</a></p>
+                <p class="ml-4 menuItem"><a href="#">Prix</a></p>
+                <p class="ml-4 menuItem"><a href="#">Contact</a></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav id="menuMobile" class="lg:hidden z-50 bg-white min-h-allScreen absolute w-full py-8 px-4"> <!-- Mobile -->
+
+        <div class="flex justify-center mt-32 font-bold">
+            <div class="text-2xl">
+                <p id="optionsMobile1"><a href="#">Présentation</a></p>
+                <p id="optionsMobile2" class="my-4"><a href="#">Caractéristiques</a></p>
+                <p id="optionsMobile3" class="my-4"><a href="#">Prix</a></p>
+                <p id="optionsMobile4"><a href="#">Contact</a></p>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <nav class="hidden lg:block"> <!-- Desktop -->
+
+    </nav>
+
+</header>
+
+
+
+
+
+
+
+<main class="flex flex-grow">
+
+    <div class="py-20 mx-40">
+
+        <div id="presentation" class="w-full bg-white overflow-hidden"> <! fast's app presentation />
+
+            <div class="flex justify-center  p-4  w-full">
+                <p class="text-gray-700 text-center font-extrabold">Lorem ipsum qdmokqsodk qosohdoqsdho qhsqokhd lqsshd lqshdlùqh <br> qsdùl hqssldh qkùslkdh qhsdù hqdsùlh </p>
+            </div>
+
+            <div class="flex justify-center box-border p-4 w-full"> <!-- Button "Download" -->
+                <button class="bg-purple-middle hover:bg-purple-light text-customWhite font-bold py-2 px-4 rounded-full">
+                    Obtenir l'application
+                </button>
+                <i class=" "></i>
+                <i class=""></i>
+            </div>
+
+        </div>
+        <!--  -->
+        <div>
+            <h3 class="text-4xl mb-6 lg:mt-6 font-bold"> Condition d'utilisation : </h3>
+            <p>
+                Dernière révision le 11/6/2019<br>
+                Changements clés de cette version : (i) Nous avons supprimé les références à Tinder Stacks, un produit désormais obsolète. Nous avons également clarifié les droits d'annulation pour
+                les utilisateurs qui vivent dans des pays aux exigences nationales spécifiques.<br><br>
+
+                Pour un résumé des Conditions d'utilisation, veuillez vous rendre sur le Résumé des Conditions.<br><br>
+
+                Bienvenue chez Tinder. Si vous vivez dans l'Union européenne, ces Conditions d'utilisation s'appliquent entre vous et :<br><br>
+
+                MTCH Technology Services Limited (« MTCH Technology »)<br>
+                WeWork Charlemont Exchange<br>
+                42 Charlemont Street<br>
+                Dublin 2, D02 R593 Irlande<br>
+                Irlande<br><br>
+
+                Si vous vivez hors de l'Union Européenne, ces Conditions d'utilisation s'appliquent entre vous et :<br><br>
+
+                Match Group, LLC (« Match Group »)<br>
+                8750 North Central Expressway, Suite 1400<br>
+                Dallas, TX 75231, États-Unis<br>
+
+                Les termes « nous », « nos », « l'entreprise » ou « Tinder » font référence à MTCH Technology ou Match Group, selon votre pays de résidence.<br><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold" >1. Accord d'acceptation des Conditions d'utilisation.</h4>
+                <p>
+                    En créant un compte Tinder, que ce soit sur un appareil mobile, une application mobile ou sur ordinateur (ensemble, le « Service »), vous acceptez d'être lié par (i) les présentes Conditions
+                    d'utilisation, (ii) notre Politique de confidentialité et les Conseils de sûreté, chacun incorporé par référence au présent Accord, et (iii) toutes conditions divulguées et que vous acceptez si
+                    vous achetez des fonctions, produits ou services supplémentaires que nous offrons sur le Service (ensemble, le présent « Accord »). Si vous n'acceptez pas l'ensemble des conditions du présent Accord,
+                    et que vous refusez d'être lié par celles-ci, veuillez ne pas utiliser le Service.<br><br>
+
+                    Nous sommes susceptibles d'apporter des changements au présent Accord et au Service à tout moment. Nous pouvons le faire pour différentes raisons, notamment pour refléter des changements de la loi ou
+                    de ses exigences, de nouvelles fonctions, ou des changements dans les pratiques commerciales. La version la plus récente du présent Accord sera publiée dans la section Service dans les Paramètres ainsi
+                    que sur gotinder.com, et nous vous suggérons de consulter régulièrement la version la plus récente. La version la plus récente est celle qui s'applique. Si les changements comprennent des changements
+                    matériels qui affectent vos droits ou obligations, nous vous notifierons par avance des changements par des moyens raisonnables, qui pourraient inclure des notifications au travers du Service ou par
+                    email. Si vous continuez d'utiliser le Service après l'entrée en vigueur des changements, cela signifie que vous acceptez l'Accord révisé.<br><br>
+                </p>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold" >2. Admissibilité.</h4>
+                <p>
+                    Vous devez être âgé d'au moins 18 ans pour pouvoir créer un compte sur Tinder et utiliser le Service. En créant un compte et en utilisant le Service, vous déclarez et garantissez que :<br><br>
+
+                    vous pouvez conclure un contrat créant des obligations avec Tinder<br>
+                    vous n'êtes pas une personne à qui il est interdit d'utiliser le Service en vertu des lois des États-Unis ou de toute autre juridiction applicable, c'est-à-dire que vous n'apparaissez pas sur la
+                    liste des Nationaux spécifiquement désignés établie par le Département du Trésor américain ni ne faites l'objet d'aucune autre interdiction similaire,<br>
+                    vous respecterez le présent Accord et l'ensemble des lois, règles et règlements locaux, étatiques, nationaux et internationaux applicables, et<br>
+                    vous n'avez jamais été condamné pour un crime ou un délit passible de poursuites (ou un crime de gravité similaire), un crime à caractère sexuel ou impliquant de la violence, et n'êtes pas tenu de
+                    vous déclarer en tant que délinquant sexuel auprès de tout registre des délinquants sexuels au niveau étatique, fédéral ou local.<br><br>
+                </p>
+
+
+                <h class="text-2xl mb-4 lg:mt-4 font-bold">3. Votre Compte.</h>
+                <p>
+                    Pour utiliser Tinder, vous pouvez vous connecter en utilisant votre identifiant Facebook. Si vous le faites, vous nous autorisez à accéder à certaines informations du compte Facebook et à les utiliser,
+                    y compris, notamment votre profil public Facebook et les informations concernant les amis Facebook que vous avez en commun avec d'autres utilisateurs de Tinder, qui ont autorisé Tinder ou Facebook à
+                    utiliser leurs informations personnelles. Pour plus d'informations concernant les informations que nous collectons auprès de vous et la façon dont nous les utilisons, veuillez consulter notre Politique
+                    de confidentialité.<br><br>
+
+                    Vous êtes responsable de maintenir la confidentialité des identifiants de connexion que vous utilisez pour vous inscrire sur Tinder, et vous êtes seul responsable de toutes les activités survenant sous
+                    ces identifiants. Si vous pensez que quelqu'un a eu accès à votre compte, veuillez nous contacter immédiatement.<br>
+                </p><br><br>
+
+                <h class="text-2xl mb-4 lg:mt-4 font-bold">4. Modification du Service et Résiliation.</h>
+                <p>
+                    Tinder s'efforce d'améliorer en permanence le Service et de vous apporter des fonctionnalités supplémentaires que vous trouverez intéressantes et utiles. Cela signifie que nous pouvons ajouter de nouvelles
+                    fonctions de produit ou des améliorations à tout moment et que de même nous pouvons supprimer certaines fonctions, et si ces actions n'affectent pas matériellement vos droits ou obligations, nous pouvons
+                    ne pas vous avertir avant de les appliquer. Nous pouvons même suspendre entièrement le Service, auquel cas nous vous avertirons par avance sauf si des circonstances atténuantes, tels que des problèmes de
+                    sûreté ou de sécurité, nous empêchent de le faire.<br><br>
+
+                    Vous pouvez résilier votre compte en donnant un préavis d'un mois, avant la fin du mois, pour quelque raison que ce soit, en suivant les instructions de la section « Paramètres » du Service. Cependant, si
+                    vous utilisez un compte de paiement tiers, vous devrez gérer vos achats via l'application par le biais de ce compte (par ex., iTunes, Google Play) pour éviter les facturations récurrentes. Tinder peut
+                    résilier votre compte à tout moment et sans préavis si nous pensons que vous avez violé le présent Accord. Après une telle résiliation, vous n’aurez droit à aucun remboursement de vos achats. Après
+                    résiliation de votre compte, le présent Accord sera résilié, à l’exception des stipulations suivantes qui continueront de s’appliquer à vous et à Tinder : Section 4, 5 et 12 à 19.<br>
+                </p><br><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">5. Sûreté ; vos Interactions avec d'autres Utilisateurs.</h4>
+                <p>
+                    Bien que Tinder s'efforce d'encourager une expérience respectueuse de l'utilisateur au travers de fonctions telles que la double option qui ne permet aux utilisateurs de communiquer que si tous deux ont
+                    indiqué leur intérêt pour l'autre, nous ne sommes pas responsables de la conduite de tout utilisateur dans le cadre ou en dehors du Service. Vous acceptez d'être prudent dans toutes vos interactions avec
+                    d'autres utilisateurs, en particulier si vous décidez d'échanger en dehors du Service ou de vous rencontrer en personne. De plus, vous acceptez de consulter et de suivre les Conseils de sûreté de Tinder
+                    avant d'utiliser le Service. Vous acceptez de ne pas fournir vos informations financières (par exemple, votre numéro de carte bancaire ou de compte bancaire), ni transférer d'argent par virement ou autre,
+                    à d'autres utilisateurs.<br><br>
+
+                    <b>VOUS ÊTES SEUL RESPONSABLE DE VOS INTERACTIONS AVEC D'AUTRES UTILISATEURS. VOUS COMPRENEZ QUE TINDER NE PROCÈDE À AUCUNE VÉRIFICATION D'ANTÉCÉDENTS CRIMINELS SUR SES UTILISATEURS NI N'ENQUÊTE AUTREMENT SUR
+                        LES ANTÉCÉDENTS DE SES UTILISATEURS. TINDER NE FAIT AUCUNE DÉCLARATION NI GARANTIE QUANT À LA CONDUITE DES UTILISATEURS.</b><br><br>
+                </p>
+
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">6. Les droits que Tinder vous accorde.</h4>
+                <p>
+                    Tinder vous accorde une licence personnelle, mondiale, libre de redevance, incessible, non-exclusive, révocable et ne pouvant faire l'objet d'une sous-licence afin d'accéder au Service et de l'utiliser.
+                    Cette licence a uniquement pour objet de vous permettre d'utiliser et de bénéficier des avantages des Services conçus par Tinder et autorisés par le présent Accord. Par conséquent, vous acceptez de vous
+                    abstenir :<br><br>
+
+                    d'utiliser le Service ou tout contenu du Service à toutes fins commerciales sans notre consentement écrit.<br>
+                    de copier, modifier, transmettre, créer toutes œuvres dérivées, utiliser ou reproduire de quelque façon que ce soit tous supports assujettis à un droit d'auteur, toutes images, marques commerciales,
+                    dénominations commerciales, marques de service ou tous autres éléments de propriété intellectuelle, contenus ou informations exclusives accessibles au travers du Service sans le consentement écrit
+                    préalable de Tinder.<br>
+                    d'exprimer ou de sous-entendre que l'une quelconque de vos déclarations est approuvée par Tinder.<br>
+                    d'utiliser tout(e) robot, agent numérique, araignée, collecteur, racloir, application de recherche/extraction de site, passerelle de procuration ou autre appareil manuel ou automatique, méthode ou
+                    processus visant à accéder, extraire, indexer, fouiller les données ou reproduire ou éluder de quelque façon que ce soit la structure de navigation ou la présentation du Service ou de ses contenus.<br><br>
+                    d'utiliser le Service de quelque façon que ce soit qui pourrait interférer avec le Service, les serveurs ou les réseaux connectés au Service, les interrompre ou leur nuire.<br>
+                    de télécharger des virus ou autres codes malveillants ou compromettre autrement la sécurité du Service.<br>
+                    de falsifier tout en-tête ou manipuler autrement les identifiants afin de masquer l'origine de toute information transmise sur ou à travers le Service.<br>
+                    de copier ou de reproduire toute partie du Service sans l'autorisation préalable écrite de Tinder.<br>
+                    d'utiliser des métabalises, un code ou d'autres appareils contenant tout référence à Tinder ou au Service (ou toute marque, dénomination commerciale, marque de service, tout logo ou slogan de Tinder) pour diriger toute personne vers un autre site Internet à quelque fin que ce soit.<br>
+                    de modifier, adapter, octroyer une sous-licence, traduire, vendre, procéder à une ingénierie inverse, décrypter, décompiler ou désassembler autrement toute portion du Service, ou obtenir d'autres qu'ils le fassent.<br>
+                    d'utiliser ou de développer toutes applications qui interagissent avec le Service ou le Contenu ou les informations d'autres utilisateurs sans notre consentement écrit.<br>
+                    d'utiliser, accéder à ou publier l'interface de programmation de l'application Tinder sans notre consentement écrit.<br>
+                    de sonder, scanner ou tester la vulnérabilité de notre Service ou de tout système ou réseau.<br>
+                    d'encourager ou de promouvoir toute activité qui viole le présent Accord.<br><br>
+
+                    La Société peut enquêter et s'engager dans toute voie de droit disponible en réponse aux utilisations illégales et/ou non-autorisées du Service, y compris la résiliation de votre compte.<br><br>
+
+                    Tout logiciel que nous vous fournissons peut automatiquement télécharger et installer des améliorations, mises à jour ou autres nouvelles fonctions. Vous pouvez ajuster ces téléchargements automatiques dans les paramètres de votre appareil.<br>
+                </p><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">7. Les droits que vous accordez à Tinder.</h4>
+                <p>
+                    En créant un compte, vous accordez à Tinder une licence mondiale, transférable, pouvant donner lieu à des sous-licences et libre de redevance, et le droit d'héberger, de stocker, d'utiliser, de copier, d'afficher, de reproduire, d'adapter, de modifier, de publier et de distribuer toutes les
+                    informations auxquelles vous nous autorisez à accéder depuis Facebook, ainsi que les informations que vous publiez, chargez, affichez ou rendez disponibles (ensemble, « publiez ») sur le Service ou que vous transmettez à d'autres utilisateurs (ensemble, « Contenu »). La licence de Tinder sur
+                    votre Contenu n'est pas exclusive, à l'exception des œuvres dérivées créées via l'utilisation du Service, pour lesquelles la licence de Tinder sera exclusive. Par exemple, dans le cas de captures d'écran du Service, comportant votre Contenu, la licence de Tinder serait exclusive. De plus, pour
+                    que Tinder puisse empêcher l'utilisation de votre Contenu en dehors du Service, vous autorisez Tinder à agir en votre nom dans le cas d'une utilisation non autorisée de votre Contenu, tiré du Service par d'autres utilisateurs ou des tierces parties. Cela comprend expressément le pouvoir, et non
+                    l'obligation, d'envoyer des avis conformément au 17 U.S.C. § 512(c)(3) (c'est-à-dire les avis de retrait du DMCA) en votre nom si votre Contenu est tiré du Service et utilisé par des tierces parties en dehors de celui-ci. Notre licence sur votre Contenu est régie par vos droits conformément aux
+                    lois en vigueur (par exemple les lois sur la protection des données personnelles dans la mesure où le Contenu contient des informations personnelles telles que définies par ces lois) et n'existe que dans le but limité de développer, fournir, gérer et améliorer le Service, et pour la recherche et
+                    le développement d'autres services. Vous acceptez que tout Contenu que vous placez ou que vous nous autorisez à placer sur le Service peut être vu par d'autres utilisateurs et peut être vu par toute personne qui consulte ou qui participe au Service (comme des personnes qui peuvent recevoir du Contenu partagé par d'autres utilisateurs de Tinder).<br><br>
+
+                    Vous convenez que toutes informations que vous soumettez lors de la création de votre compte, y compris des informations soumises à partir de votre compte Facebook, sont exactes et véridiques et que vous avez le droit de publier le Contenu sur le Service et d’accorder à Tinder la licence susmentionnée.<br><br>
+
+                    Vous comprenez et acceptez que nous puissions surveiller ou examiner tout Contenu que vous publiez dans le cadre d'un Service. Nous pouvons supprimer tout Contenu, en tout ou partie, si, selon notre seul jugement, il viole le présent Accord ou est susceptible de nuire à la réputation du Service.<br><br>
+
+                    Lors de toute communication avec nos représentants du service client, vous acceptez d'être respectueux et aimable. Si nous considérons que votre comportement envers l'un de nos représentants du service client ou autres employés est à tout moment menaçant ou injurieux, nous nous réservons le droit de résilier immédiatement votre compte.<br><br>
+
+                    En contrepartie de l'autorisation que Tinder vous accorde d'utiliser le Service, vous convenez que nous, nos affiliés et nos partenaires tiers puissent placer des annonces sur le Service. En soumettant des suggestions ou des commentaires à Tinder à propos de nos Services, vous convenez que Tinder puisse utiliser et partager ce retour à toute fin que ce soit sans vous offrir de compensation.<br><br>
+
+                    Veuillez noter que Tinder peut accéder, stocker et divulguer les informations et le Contenu de votre compte si nous sommes tenus de le faire en vertu de la loi, dans le cadre du présent Accord, ou si nous croyons de bonne foi que lesdits accès, stockage ou divulgation constituent un intérêt légitime, afin de : (i) respecter une procédure judiciaire ; (ii) faire appliquer le présent Accord ;
+                    (iii) répondre à toutes réclamations selon lesquelles tout Contenu violerait les droits de tiers ; (iv) répondre à vos demandes au service client ; ou (v) protéger les droits, la propriété ou la sûreté personnelle de la Société ou de toute autre personne.<br>
+                </p><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">8. Règles de la communauté.</h4>
+                <p>
+                    En utilisant le Service, vous convenez que vous vous abstiendrez :<br><br>
+
+                    d'utiliser le Service à toute fin illégale ou interdite par le présent Accord.<br>
+                    d'utiliser le Service à des fins malveillantes ou malfaisantes<br>
+                    d'utiliser le Service afin de porter atteinte à Tinder<br>
+                    d'enfreindre nos Standards de la communauté, qui peuvent être mis à jour régulièrement.<br>
+                    d'envoyer du courrier indésirable, de solliciter de l'argent à tous utilisateurs ou de les escroquer.<br>
+                    d'imiter toute personne ou entité ou de publier toutes images d'une autre personne sans sa permission.<br>
+                    de persécuter, traquer, intimider, attaquer, harceler, maltraiter ou diffamer toute personne.<br>
+                    de publier tout Contenu qui viole ou enfreint les droits de quiconque, y compris les droits de publicité, au respect de la vie privée, d'auteur, de marque commerciale ou autre droit de propriété intellectuelle ou contractuel.<br>
+                    de publier tout Contenu constituant un discours haineux, menaçant, sexuellement explicite ou pornographique ; incitant à la violence ou contenant de la nudité, de la violence graphique ou gratuite.<br>
+                    de publier du contenu qui comprend des propos racistes, intolérants, haineux ou qui encourage les violences physiques contre un groupe ou une personne en particulier.<br>
+                    de solliciter des mots de passe à quelque fin que ce soit, ou des informations permettant une identification personnelle à des fins commerciales ou illégales auprès d'autres utilisateurs ou de diffuser les informations personnelles d'une autre personne sans sa permission.<br>
+                    utiliser le compte d'un autre utilisateur, partager un compte avec un autre utilisateur ou posséder plus d'un compte.<br>
+                    de créer un autre compte si nous avons déjà résilié votre compte, à moins que vous n'ayez notre permission.<br><br>
+
+                    Tinder se réserve le droit d’enquêter et/ou de résilier votre compte sans rembourser vos achats si vous avez fait enfreint cet Accord, fait une mauvaise utilisation du Service ou que vous vous êtes comporté d’une façon que Tinder considère comme inappropriée ou illégale, y compris en cas d’actions ou de communications survenant en dehors du Service.<br>
+                </p><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">9. Contenu d'autres utilisateurs.</h4>
+                <p>
+                    Bien que Tinder se réserve le droit d'examiner et de supprimer tout Contenu qui viole le présent Accord, ledit Contenu relève de la seule responsabilité de l'utilisateur qui le publie, et Tinder ne peut garantir que l'ensemble du Contenu sera conforme au présent Accord. Si vous voyez un Contenu sur le Service qui viole le présent Accord, veuillez le signaler sur le Service ou via notre page de contact.<br>
+                </p><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">10. Achats</h4>
+                <p>
+                    Généralités. À tout moment, Tinder peut offrir des produits et services à l'achat (« achats internes à l'appli ») au travers d’iTunes, Google Play, de l'opérateur mobile, d'une facturation directe de Tinder ou d'autres plateformes d'applications autorisées par Tinder. Si vous choisissez de faire un achat au sein de l'application, vous devrez confirmer cet achat par le biais du fournisseur de paiement applicable,
+                    et votre mode de paiement (que ce soit votre carte bancaire ou un compte tiers comme Google Play ou iTunes) (votre « Mode de paiement ») sera débité pour l'achat interne à l'application du montant du prix affiché pour le ou les services sélectionnés ainsi que toute taxe sur les ventes ou autre, pouvant être imposée sur vos paiements. Vous autorisez Tinder ou le compte de paiement tiers, le cas échéant, à vous débiter.
+                    Si vous achetez un abonnement périodique à renouvellement automatique au travers d'un achat interne à l’appli, votre Compte IAP sera débité pour l'abonnement jusqu'à ce que vous l'annuliez. Après votre engagement pour une période initiale d'abonnement, et ensuite après toute période d'abonnement ultérieure, votre abonnement se renouvellera automatiquement pour une période équivalente supplémentaire, au prix que vous avez approuvé lors de la souscription.<br><br>
+
+                    Renouvellement automatique. Paiements automatiques par carte<br>
+
+                    Les abonnements sont automatiquement renouvelés, jusqu'à résiliation ou annulation de votre part. Lorsque vous vous abonnez, votre Mode de paiement sera débité tous les mois dans les 24 h précédant la date initiale de l'achat, au prix que vous avez accepté lors de la souscription initiale. Les informations de votre carte bancaire seront stockées et utilisées ultérieurement pour les paiements automatiques par carte, conformément au présent Accord.<br><br>
+
+                    Après chaque paiement, vous recevrez une confirmation par e-mail. Si vous souhaitez vous opposer à un paiement déjà effectué, veuillez vous adresser au service client si vous avez été facturé directement par Tinder, ou au compte de paiement tiers en question, comme iTunes par exemple. Vous pouvez également vous y opposer en contactant votre banque ou votre fournisseur de paiement, qui pourra vous fournir de plus amples informations sur vos droits ainsi que les délais applicables.<br><br>
+
+                    Vous pouvez vous opposer de manière inconditionnelle aux paiements automatiques par carte bancaire et ce, à tout moment, en vous rendant dans les paramètres sur Tinder ou le compte de paiement tiers, mais notez que vous êtes toujours dans l'obligation de payer tout montant restant.<br><br>
+
+                    Si vous voulez modifier ou résilier votre abonnement, vous devrez vous connecter à votre compte tiers (ou vous rendre dans les paramètres de votre compte sur Tinder) et suivre les instructions de résiliation ou d'annulation votre abonnement, même si vous avez supprimé votre compte auprès de nous d'une autre façon ou si vous avez supprimé l'application Tinder de votre appareil. Il ne suffit pas de supprimer votre compte sur Tinder ou de supprimer
+                    l'application Tinder de votre appareil pour résilier ou annuler votre abonnement. Tinder conservera tous les fonds débités de votre Mode de paiement jusqu'à ce que vous résiliez ou annuliez votre abonnement sur Tinder ou via le compte tiers, le cas échéant. Si vous résiliez ou annulez votre abonnement, vous pouvez continuer à l’utiliser jusqu’à la fin de la période d’abonnement en cours. Votre abonnement ne sera pas renouvelé à la fin de cette période.<br><br>
+
+                    Conditions supplémentaires qui s'appliquent si vous payez Tinder directement via votre Mode de paiement. Si vous payez Tinder directement, Tinder peut corriger toute erreur de facturation commise même si le paiement a déjà été émis ou reçu. Si vous faites une demande de remboursement ou annulez un paiement émis à l’aide de votre Mode de paiement, Tinder peut résilier votre compte immédiatement à sa seule discrétion.<br><br>
+
+                    Vous pouvez modifier votre Mode de paiement sur Tinder en vous rendant dans « Mon profil ». En cas d’échec de paiement, en raison d’une expiration, de fonds insuffisants ou d’une autre raison, et si vous ne modifiez pas votre Mode de paiement ni ne résiliez votre abonnement, vous restez redevable de tout montant dû et nous autorisez à continuer de prélever votre Mode de paiement, lorsqu’il aura été mise à jour. Les dates de
+                    facturation pourraient s'en trouver modifiées. De plus, vous nous autorisez à obtenir les nouvelles dates d’expiration et nouveaux numéros de cartes bancaires tels que fournis par l’émetteur de votre carte. Les conditions de vos paiements dépendent de votre Mode de paiement et peuvent être déterminées par des accords entre votre banque, émetteur de carte ou autre fournisseur de votre Mode de paiement et vous. Si vous résidez en dehors des Amériques, vous acceptez que votre paiement à Tinder soit effectué par MTCH Technology Services Limited.<br><br>
+
+                    Super Likes et autres Articles virtuels. Vous pouvez acheter, à tout moment, une licence limitée, personnelle, incessible, révocable, ne pouvant faire l'objet d'une sous-licence, pour utiliser des « articles virtuels » comprenant, notamment, des Super Likes (ensemble, « Articles virtuels »). Tout solde d'Article virtuel apparaissant sur votre compte ne constitue pas un solde dans le monde réel et ne reflète pas une valeur stockée. Il constitue une mesure de l'étendue de votre licence. Les Articles virtuels ne créent pas de frais en cas de non-utilisation.
+                    Cependant, la licence vous étant accordée sur les Articles virtuels sera résiliée conformément aux termes du présent Accord, lorsque Tinder cessera de fournir le Service ou que votre compte sera autrement clôturé ou résilié. Tinder, à sa seule discrétion, se réserve le droit de facturer des frais d'accès aux Articles virtuels ou pour leur utilisation et/ou peut distribuer des Articles virtuels à titre payant ou gratuit. Tinder peut gérer, réguler, contrôler, modifier ou éliminer les Articles virtuels à tout moment. Tinder n'aura aucune responsabilité envers
+                    vous ou tout autre tiers si Tinder exerce l'un desdits droits. Les Articles virtuels peuvent uniquement être échangés à travers le Service. L'ENSEMBLE DES ACHATS ET RACHATS D'ARTICLES VIRTUELS EFFECTUÉS À TRAVERS LE SERVICE SONT DÉFINITIFS ET NON-REMBOURSABLES. La fourniture d'Articles virtuels à utiliser dans le cadre du Service est un service commençant immédiatement sur acceptation de votre achat desdits Articles virtuels. VOUS RECONNAISSEZ QUE TINDER N'EST PAS TENU DE FOURNIR UN REMBOURSEMENT POUR QUELQUE RAISON QUE CE SOIT VIS-À-VIS DES ARTICLES VIRTUELS,
+                    ET QUE VOUS NE RECEVREZ PAS D'ARGENT NI D'AUTRE COMPENSATION AU TITRE D'ARTICLES VIRTUELS NON UTILISÉS LORSQU'UN COMPTE EST CLÔTURÉ, QUE CETTE CLÔTURE SOIT VOLONTAIRE OU INVOLONTAIRE.<br><br>
+
+                    Remboursements. En général, tous les frais des achats sont non remboursables, et nous ne fournissons pas de remboursements ou de crédits en cas de périodes partiellement utilisées. Nous pouvons faire une exception si un remboursement pour une offre d’abonnement est demandé dans les quatorze jours suivant la date de la transaction, ou si les lois applicables dans votre juridiction prévoient les remboursements.<br><br>
+
+                    Pour les abonnés résidant dans l'UE ou dans l'Espace économique européen, conformément aux lois locales, vous avez droit à un remboursement intégral pendant les 14 jours suivant le début de votre abonnement, sans avoir besoin d'en spécifier le motif. Veuillez noter que cette période de 14 jours commence au moment de la souscription.<br><br>
+
+                    Les achats d'Articles virtuels sont DÉFINITIFS ET NON-REMBOURSABLES.<br><br>
+
+                    Pour demander un remboursement :<br>
+                    Si vous vous êtes inscrit avec votre identifiant Apple, les remboursements sont traités par Apple et non Tinder. Pour demander un remboursement, rendez-vous sur iTunes, cliquez sur votre identifiant Apple, sélectionnez « Historique d'achats », trouvez la transaction et appuyez sur « Signaler un problème ». Vous pouvez également soumettre une demande sur https://getsupport.apple.com.<br><br>
+
+                    Si vous vous êtes inscrit à l'aide de votre compte Google Play Store ou via Tinder directement : veuillez contacter le service client avec votre numéro de commande Google Play (vous trouverez ce numéro dans l’e-mail de confirmation que vous avez reçu ou en vous connectant à Google Wallet) ou votre numéro de commande Tinder (vous trouverez ce numéro dans l’e-mail de confirmation). Vous pouvez également nous envoyer par courrier une lettre datée et signée nous indiquant que vous, l’acheteur, résiliez cet accord, ou une mention similaire.
+                    Veuillez également indiquer l'adresse e-mail ou le numéro de téléphone associé à votre compte ainsi que le numéro de commande. Ce courrier devra être envoyé à : Tinder, Attn: Cancellations, P.O. Box 25472, Dallas, Texas 75225, États-Unis.<br><br>
+
+                    Vous pouvez également utiliser le formulaire standard d'annulation d'abonnement (Annexe 1) mais ce n'est pas obligatoire.<br><br>
+
+                    Exception au droit de rétractation : Si vous utilisez votre droit de rétractation (à l'exception des achats faits par le biais de votre identifiant Apple, qui est géré par Apple), nous vous rembourserons (ou demanderons à Google de vous rembourser) tous les paiements que nous avons reçus de votre part, sans délai et dans tous les cas dans les 14 jours suivant la date à laquelle nous avons accusé réception de votre demande de rétractation. Ce remboursement sera effectué à l'aide du même mode de paiement que vous avez utilisé pour la transaction initiale. Dans tous les cas, aucun frais ne vous sera facturé suite à ce remboursement.<br><br>
+
+                    Conséquences de l'annulation d'un abonnement : Vous ne pouvez pas annuler une commande de contenu digital, qui n'est pas livrée par un moyen physique, si le traitement de la commande a commencé avec votre consentement explicite et si vous avez été informé que vous perdrez votre droit de rétractation en poursuivant cette commande. Ceci s'applique par exemple aux achats d'Articles virtuels. Cela signifie que ces achats sont FINAUX ET NON-REMBOURSABLES.<br><br>
+                </p>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">11. Avis et Procédure de dépôt de plainte en cas d’atteinte au droit d’auteur.</h4>
+                <p>
+                    Si vous croyez que votre œuvre a été copiée et publiée sur le Service d'une façon constituant une violation de droit d'auteur, veuillez fournir à notre Agent responsable des droits d'auteur les informations suivantes :
+
+                    une signature électronique ou physique de la personne autorisée à agir au nom du propriétaire du droit d'auteur ;<br>
+                    une description de l'œuvre portant le droit d’auteur que vous alléguez avoir été violé ;<br>
+                    une description de l'endroit où le matériel dont vous alléguez qu'il est en violation est situé sur le Service (et cette description doit suffire raisonnablement pour nous permettre de trouver le matériel prétendument en violation) ;<br>
+                    vos coordonnées, y compris l'adresse, le numéro de téléphone et l'adresse électronique ;<br>
+                    une déclaration écrite de votre main indiquant que vous croyez de bonne foi que l'utilisation contestée n'est pas autorisée par le propriétaire du droit d'auteur, son agent, ou la loi ; et<br>
+                    une déclaration faite par vous, sous peine de parjure, indiquant que les informations ci-dessus incluses dans votre notification sont exactes et que vous êtes le propriétaire du droit d'auteur ou que vous êtes autorisé à agir pour le compte du propriétaire du droit d'auteur.<br><br>
+
+                    Les avis de dépôt de plainte en cas d’atteinte au droit d’auteur doivent être envoyés à l’agent de la société en charge des droits d’auteur par e-mail à l’adresse copyright@match.com, par fax au numéro +1-214-576-3272 ou par courrier à l’adresse :<br><br>
+
+                    Copyright Compliance Department c/o Match Group Legal 8750 N. Central Expressway, Suite 1400 Dallas, Texas 75231<br>
+                    États-Unis<br><br>
+                    Le présent Accord et la Politique de confidentialité, les Conseils de sûreté et toutes conditions divulguées et convenues par vous lorsque vous achetez des fonctions, produits ou services supplémentaires que nous offrons sur le Service, contiennent l'intégralité de l'accord entre vous et Tinder concernant l'utilisation du Service. Si toute stipulation du présent Accord est jugée nulle, le reste du présent Accord restera pleinement en vigueur. Le manquement de la Société à exercer ou à faire appliquer toute stipulation du présent Accord ne constituera pas une renonciation audit droit ou à ladite stipulation. Vous convenez que votre compte Tinder est incessible et que l'ensemble de vos droits à votre compte et son Contenu seront résiliés à votre décès. Aucun(e) agence, partenariat, coentreprise, fiduciaire ou autre relation spéciale ni emploi n'est créé(e) en conséquence du présent Accord et vous ne pouvez faire de déclarations ni lier Tinder de quelque manière que ce soit.<br>
+                </p><br><br>
+
+                </p>
+                Tinder résiliera les comptes des contrevenants récidivistes.<br><br>
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">12. Avis de non-responsabilité.</h4>
+
+                    TINDER FOURNIT LE SERVICE « TEL QUEL » ET « SELON LA DISPONIBILITÉ » ET, DANS LA MESURE AUTORISÉE PAR LA LOI APPLICABLE, N'ACCORDE AUCUNE GARANTIE DE QUELQUE
+                    NATURE QUE CE SOIT, QU'ELLE SOIT EXPRESSE, IMPLICITE, OBLIGATOIRE OU AUTRE CONCERNANT LE SERVICE (Y COMPRIS TOUT CONTENU DE CELUI-CI), Y COMPRIS, NOTAMMENT, TOUTE
+                    GARANTIE IMPLICITE DE QUALITÉ SATISFAISANTE, QUALITÉ MARCHANDE, ADAPTATION À UNE FIN PARTICULIÈRE OU ABSENCE DE CONTREFAÇON. TINDER NE DÉCLARE NI NE GARANTIT QUE
+                    (A) LE SERVICE SERA SANS INTERRUPTION, SÛR OU LIBRE D'ERREUR, (B) TOUS LES DÉFAUTS OU ERREURS DU SERVICE SERONT CORRIGÉ(E)S, OU (C) QUE TOUT CONTENU OU TOUTE
+                    INFORMATION QUE VOUS OBTENEZ SUR OU À TRAVERS LES SERVICES SERA EXACT(E).<br><br>
+
+                    TINDER N'ASSUME AUCUNE RESPONSABILITÉ POUR TOUT CONTENU QUE VOUS, UN AUTRE UTILISATEUR OU UN TIERS PUBLIE, ENVOIE OU REÇOIT AU TRAVERS DES SERVICES. VOTRE ACCÈS À
+                    TOUT MATÉRIEL TÉLÉCHARGÉ OU OBTENU À TRAVERS L'UTILISATION DU SERVICE EST À VOS SEULS DISCRÉTION ET RISQUE.<br>
+                </p><br><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">13. Services de tiers.</h4>
+                <p>
+                    Le Service peut contenir des annonces et promotions offertes par des tiers ainsi que des liens vers d'autres sites ou ressources Internet. Tinder n'est pas
+                    responsable de la disponibilité (ou indisponibilité) desdit(e)s sites Internet ou ressources externes. Si vous choisissez d'interagir avec les tiers mis à
+                    disposition à travers de notre Service, les conditions desdits tiers régiront leur relation avec vous. Tinder n'est d'aucune façon responsable des conditions
+                    ou actions desdits tiers.<br>
+                </p><br><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">14. Limitation de responsabilité.</h4>
+                <p>
+                    DANS LA PLUS GRANDE MESURE PERMISE PAR LA LOI APPLICABLE, EN AUCUN CAS TINDER, SES AFFILIÉS, EMPLOYÉS, CONCÉDANTS OU PRESTATAIRES DE SERVICE NE SERONT
+                    RESPONSABLES DE TOUS DOMMAGES-INTÉRÊTS INDIRECTS, CONSÉCUTIFS, EXEMPLAIRES, ACCESSOIRES, SPÉCIAUX OU PUNITIFS, Y COMPRIS, NOTAMMENT, UNE PERTE DE PROFITS,
+                    QU'ELLE SOIT SURVENUE DIRECTEMENT OU INDIRECTEMENT, OU TOUTE PERTE DE DONNÉES, D'USAGE, DE CLIENTÈLE OU AUTRES PERTES IMMATÉRIELLES, NAISSANT DE : (I) VOTRE
+                    ACCÈS, UTILISATION OU INCAPACITÉ D'ACCÉDER OU D'UTILISER LES SERVICES, (II) LA CONDUITE OU LE CONTENU D'AUTRES UTILISATEURS OU TIERS SUR LES SERVICES, À
+                    TRAVERS CEUX-CI OU À LA SUITE DE LEUR UTILISATION ; OU (III) L'ACCÈS, L'UTILISATION OU L'ALTÉRATION NON AUTORISÉS DE VOTRE CONTENU, MÊME SI TINDER AVAIT ÉTÉ
+                    INFORMÉ DE LA POSSIBILITÉ DESDITS DOMMAGES. EN AUCUN CAS LA RESPONSABILITÉ CUMULÉE DE TINDER ENVERS VOUS POUR L'ENSEMBLE DES PLAINTES RELATIVES AU SERVICE
+                    N'EXCÈDERA LE MONTANT QUE VOUS AUREZ PAYÉ, LE CAS ÉCHÉANT, À TINDER POUR LE SERVICE PENDANT VOTRE DURÉE DE POSSESSION DE COMPTE.<br><br>
+
+                    CERTAINES JURIDICTIONS NE PERMETTENT PAS L'EXCLUSION OU LA LIMITATION DE CERTAINS DOMMAGES-INTÉRÊTS, PAR CONSÉQUENT CERTAINES OU L'ENSEMBLE DES EXCLUSIONS ET
+                    LIMITATIONS DE LA PRÉSENTE SECTION PEUVENT NE PAS VOUS ÊTRE APPLICABLES.<br>
+                </p><br><br>
+
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">15. Arbitrage, renonciation aux recours collectifs et renonciation à un jury.</h4>
+                <p>
+                    Sauf pour les utilisateurs résidant au sein de l'Union Européenne ou de l'Espace économique européen et dans tout autre endroit où la loi l'interdit :<br><br>
+
+                    Le seul recours pour résoudre tout litige ou toute réclamation naissant du ou lié(e) au présent Accord (y compris de toute violation prétendue de celui-ci) ou au Service sera l'ARBITRAGE AYANT FORCE EXÉCUTOIRE administré par l'American Arbitration Association en vertu des Règles d'arbitrage relatives au consommateur. La seule exception à l'exclusivité de l'arbitrage est que vous avez le droit de déposer une réclamation individuelle contre la Société auprès d'un tribunal d’instance ou de proximité compétent. Cependant, que vous choisissiez l'arbitrage ou le tribunal d’instance ou de proximité, en aucune circonstance vous ne pourrez intenter ni poursuivre contre la Société un recours collectif, un arbitrage collectif, ou une autre action ou procédure représentative.<br>
+                    En utilisant le Service de quelque manière que ce soit, vous acceptez l'accord d'arbitrage ci-dessus. Ce faisant, VOUS ABANDONNEZ VOTRE DROIT DE VOUS ADRESSER À UNE JURIDICTION JUDICIAIRE afin d’alléguer ou de défendre toutes réclamations entre vous et la Société (sauf pour les affaires pouvant être traitées par un tribunal d’instance ou de proximité). VOUS RENONCEZ ÉGALEMENT À VOTRE DROIT DE PARTICIPER À UN RECOURS COLLECTIF OU TOUTE AUTRE PROCÉDURE COLLECTIVE. Vos droits seront déterminés par un ARBITRE NEUTRE, NON UN JUGE NI UN JURY, et l'arbitre décidera de tous les problèmes concernant la possibilité d'arbitrer le litige. Vous avez droit à une audience juste devant l'arbitre. L'arbitre peut octroyer toute mesure réparatoire pouvant être accordée par un tribunal, mais veuillez noter que les procédures d’arbitrage sont généralement plus simples et abrégées que les procès et autres procédures judiciaires. Les décisions prises par l'arbitre sont reconnues par les tribunaux et ne peuvent être annulées par un tribunal que pour des raisons très limitées. Pour plus de détails sur le processus d'arbitrage, veuillez consulter nos Procédures d'arbitrage.<br>
+                    Toute procédure visant à faire appliquer cet accord d'arbitrage, y compris toute procédure visant à confirmer, modifier ou annuler une sentence arbitrale, peut être engagée devant toute juridiction compétente. Si le présent accord d'arbitrage est jugé, pour quelque raison que ce soit, inapplicable, tout litige à l'encontre de la Société (à l'exception des actions devant un tribunal d’instance ou de proximité) ne pourra être porté que devant les juridictions fédérales ou étatiques situées dans le Comté de Dallas County, Texas. Vous consentez irrévocablement par les présentes à la compétence de ces juridictions pour ce faire.<br>
+                    Le présent Accord, et tout litige entre vous et la Société, seront régis par les lois de l'État du Texas à l'exception des principes de conflits de droit, étant entendu que cet accord d'arbitrage sera régi par la Loi fédérale d'arbitrage.<br>
+                    La plateforme de règlement des litiges en ligne de la Commission européenne se trouve à l’adresse http://ec.europa.eu/odr. Tinder ne prend pas part aux procédures de règlement des litiges face aux entités d’arbitrage des litiges de consommation pour les utilisateurs situés dans l’U.E ou dans l’EEE.<br><br>
+                </p><br><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">16. Droit applicable.</h4>
+                <p>
+                    Pour les utilisateurs résidant dans l'Union européenne, dans l'Espace économique européen ou dans tout endroit où notre accord d'arbitrage est interdit par la loi, les lois du Texas, États-Unis, à l'exception des règles du Texas gouvernant les conflits de lois, s'appliqueront à tous litiges naissant du présent Accord ou du Service ou y étant liés. Nonobstant ce qui précède, l'Accord d'arbitrage de la section 16 ci-dessus sera régi par le Federal Arbitration Act. Afin de lever toute ambiguïté, le choix du droit applicable du Texas ne prévaudra pas sur toute législation obligatoire de protection du consommateur dans lesdites juridictions.<br>
+                </p><br><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">17. Lieu du procès.</h4>
+                <p>
+                    À l'exception des utilisateurs résidant dans l'Union européenne ou dans l'Espace économique européen, qui peuvent intenter leurs actions dans leur pays de résidence conformément au droit applicable, et à l'exception des actions pouvant être intentées dans un tribunal de proximité de la juridiction compétente dans votre comté de résidence ou le comté de Dallas, au Texas, toutes les actions naissant du présent Accord, du Service ou y étant liées, ou liées à votre relation avec Tinder, qui pour quelque raison que ce soit, ne sont pas soumises à l'arbitrage, seront plaidées exclusivement dans les tribunaux fédéraux ou d'État du comté de Dallas,
+                    au Texas, États-Unis. Vous et Tinder consentez à la compétence personnelle de ces tribunaux dans l'État du Texas et renoncez à toute réclamation selon laquelle ces tribunaux seraient un forum inapproprié.<br>
+                </p><br><br>
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">18. Indemnisation à votre charge.</h4>
+
+                <p>
+                    Vous convenez, dans la mesure permise par le droit applicable, d'indemniser, de défendre et de dégager de toute responsabilité Tinder, nos affiliés,
+                    ainsi que leurs cadres, directeurs, agents et employés respectifs et les nôtres en cas de toute et de l'ensemble des plaintes, demandes, réclamations,
+                    dommages, pertes, coûts, responsabilités et dépenses, y compris les honoraires d'avocat dus à, naissant de, ou relatifs de quelque façon que ce soit à
+                    votre accès aux ou votre utilisation du Service, votre Contenu ou votre violation du présent Accord.
+                </p><br><br>
+
+
+                <h4 class="text-2xl mb-4 lg:mt-4 font-bold">19. Intégralité de l'Accord ; autres.</h4>
+                <p>
+                    Le présent Accord et la Politique de confidentialité, les Conseils de sûreté et toutes conditions divulguées et convenues par vous lorsque vous achetez
+                    des fonctions, produits ou services supplémentaires que nous offrons sur le Service, contiennent l'intégralité de l'accord entre vous et Tinder concernant
+                    l'utilisation du Service. Si toute stipulation du présent Accord est jugée nulle, le reste du présent Accord restera pleinement en vigueur. Le manquement de
+                    la Société à exercer ou à faire appliquer toute stipulation du présent Accord ne constituera pas une renonciation audit droit ou à ladite stipulation. Vous
+                    convenez que votre compte Tinder est incessible et que l'ensemble de vos droits à votre compte et son Contenu seront résiliés à votre décès. Aucun(e)
+                    agence, partenariat, coentreprise, fiduciaire ou autre relation spéciale ni emploi n'est créé(e) en conséquence du présent Accord et vous ne pouvez faire
+                    de déclarations ni lier Tinder de quelque manière que ce soit.
+                </p>
+            </p>
+        </div>
+
+        <div>
+            <h3 class="text-4xl mb-6 lg:mt-6 font-bold border-t-4 pt-10"> Politique de confidentialité : </h3>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">1. QUI NOUS SOMMES</h4>
+
+            <p>
+                Si vous vivez au sein de l'Union Européenne, la société responsable de vos informations dans le cadre de la présente Politique de confidentialité (le « contrôleur des données ») est :<br><br>
+
+                MTCH Technology Services Limited<br>
+                Tinder<br>
+                WeWork Charlemont Exchange<br>
+                42 Charlemont Street<br>
+                Dublin 2, D02 R593<br>
+                Irlande<br><br>
+
+                Si vous vivez en dehors de l'Union Européenne, la société responsable de vos informations est :<br><br>
+
+                Match Group, LLC<br>
+                8750 North Central Expressway<br>
+                Suite 1400<br>
+                Dallas, TX 75231<br>
+                United States<br>
+            </p><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">2. OÙ CETTE POLITIQUE DE CONFIDENTIALITÉ S'APPLIQUE-T-ELLE ?</h4>
+            <p>
+                La présente Politique de confidentialité s'applique aux sites Internet, aux applications, aux événements et aux autres services exploités par Tinder. Pour
+                plus de simplicité dans cette Politique de confidentialité, nous désignerons tous ces éléments sous le nom de nos « services ». Pour gagner encore plus en
+                clarté, nous avons ajouté des liens à la présente Politique de confidentialité sur tous les services applicables.<br><br>
+
+                Il se peut que certains services nécessitent leur propre Politique de confidentialité. Si un service particulier a sa propre Politique de confidentialité,
+                alors c'est cette politique -- et non pas la présente Politique de confidentialité -- qui s'appliquera.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">3. LES INFORMATIONS QUE NOUS RECUEILLONS</h4>
+            <p>
+                Il va sans dire qu’il nous est impossible de vous aider à développer des connexions significatives sans certaines informations vous concernant, telles que les informations de base sur votre profil et les types de personnes que vous aimeriez rencontrer.
+                Nous recueillons également les informations générées lors de l'utilisation de nos services, par exemple les journaux d'accès, ainsi que les informations de parties tierces,
+                comme lorsque vous accédez à nos services par l'intermédiaire d'un compte de médias sociaux. Si vous souhaitez des informations supplémentaires, nous les abordons plus en
+                détail plus bas.<br><br>
+                Les informations que vous nous donnez<br><br>
+
+                Lorsque vous utilisez nos services, vous choisissez de nous donner certaines informations. Cela inclut :<br><br>
+
+                Lorsque vous créez un compte, vous nous livrez au moins vos identifiants de connexion, ainsi que certaines informations de base nécessaires au fonctionnement du service, telles que votre sexe et votre date de naissance.<br>
+                Lorsque vous remplissez votre profil, vous pouvez partager avec nous des informations supplémentaires, telles que des détails sur votre personnalité, votre style de vie, vos centres d'intérêt et d'autres renseignement vous concernant, ainsi que du contenu tel que des photos et des vidéos. Pour ajouter certains contenus, tels que des images ou des vidéos, vous pouvez également accéder à votre appareil photo ou à votre album de photos. Certaines des informations que vous choisissez de nous fournir peuvent être considérées comme « spéciales » ou « sensibles » dans certaines juridictions, par exemple, votre origine raciale ou ethnique, votre orientation sexuelle et vos croyances religieuses. En choisissant de fournir ces informations, vous acceptez le traitement que nous leur faisons subir.<br>
+                Lorsque vous souscrivez à un service payé ou effectuez un achat directement depuis chez nous (plutôt que par l'intermédiaire d'une plateforme telle que iOS et Android), vous nous fournissez, ou fournissez à notre prestataire de services de paiement des informations, telles que votre numéro de carte de débit ou de crédit ou d'autres informations financières.<br>
+                Lorsque vous participez à des sondages ou à des groupes de discussion, vous nous livrez votre connaissance de nos produits et services, des réponses à nos questions et des témoignages.<br>
+                Lorsque vous choisissez de participer à nos promotions, événements ou concours, nous recueillons les informations que vous utilisez pour vous enregistrer ou pour vous inscrire.<br>
+                Si vous contactez notre service clients, nous recueillons les informations que vous nous donnez dans le cadre de cette interaction. Parfois, nous surveillons ou enregistrons ces interactions à des fins de formation et pour nous garantir une qualité de service élevée.<br>
+                Si vous nous demandez de communiquer avec ou de traiter autrement les informations d'autres personnes (par exemple, si vous nous demandez d'envoyer un email en votre nom à l'un de vos amis), nous recueillons les informations sur les autres personnes que vous nous donnez pour que nous puissions accéder à votre demande.<br>
+                Bien sûr, nous traitons aussi vos discussions avec les autres utilisateurs ainsi que le contenu que vous publiez, dans le cadre du fonctionnement des services.<br><br>
+
+                Les informations que nous recevons des autres<br><br>
+
+                En plus des informations que vous nous donnez directement, nous recevons des informations sur vous depuis des tiers, y compris :<br><br>
+
+                Les autres utilisateurs<br>
+                Les autres utilisateurs peuvent fournir des informations vous concernant lorsqu'ils utilisent nos services. Par exemple, nous pouvons collecter des informations sur vous auprès d'autres utilisateurs s'ils nous contactent à votre sujet.<br><br>
+
+                Les médias sociaux<br>
+                Vous pourrez utiliser vos identifiants de médias sociaux (tels que votre connexion Facebook) pour créer et vous connecter à votre compte Tinder. Cela vous évite d'avoir à vous souvenir d'encore un autre nom d'utilisateur et mot de passe et vous permet de partager certaines informations depuis votre compte de médias sociaux avec nous.<br><br>
+
+                Les autres partenaires<br>
+                Nous pouvons recevoir des informations sur vous de la part de nos partenaires, par exemple là où des publicités Tinder sont publiées sur des sites Internet et des plateformes de partenaire (auquel cas, ils peuvent transmettre des informations sur la réussite d'une campagne).<br><br>
+
+                Les informations recueillies lorsque vous utilisez nos services<br><br>
+
+                Lorsque vous utilisez nos services, nous recueillons des informations sur les fonctionnalités dont vous vous servez, sur la façon dont vous les utilisez et sur les périphériques grâce auxquels vous accédez à nos services. Voir ci-dessous pour plus d'informations :<br><br>
+
+                Renseignements relatifs à l'utilisation<br>
+                Nous recueillons des informations sur votre activité sur nos services, par exemple comment vous les utilisez (p. ex., la date et l'heure auxquelles vous vous connectez, les fonctionnalités que vous avez utilisées, vos recherches, vos clics et les pages qui vous ont été présentées, l'adresse de page Web de référence, les publicités sur lesquelles vous cliquez) et comment vous interagissez avec les autres utilisateurs (p. ex., les utilisateurs auxquels vous vous connectez et avec lesquels vous interagissez, l'heure et la date de vos échanges, le nombre de messages que vous envoyez et recevez).<br><br>
+
+                Renseignements relatifs à votre périphérique<br>
+                Nous recueillons des informations depuis et sur le ou les périphériques que vous utilisez pour accéder à nos services, et notamment :<br>
+                des renseignements sur le matériel et les logiciels tels que l'adresse IP, l'identifiant et le type du périphérique, les paramètres et les caractéristiques propres au périphérique et aux applications, les pannes de l'application, les identifiants de publicité (tels que l'AAID de Google et l'IDFA d'Apple, l'un et l'autre étant des numéros générés aléatoirement que vous pouvez réinitialiser en allant dans les paramètres de votre périphérique), le type de navigateur, la version et la langue, le système d'exploitation, les zones horaires, les identificateurs associés aux cookies ou l'es autres technologies qui peuvent identifier de façon unique votre périphérique ou votre navigateur (p. ex., IMEI/UDID et l'adresse MAC) ;<br>
+                des informations sur votre connexion sans fil et de réseau mobile, telles que votre prestataire de service et la force de votre signal ;<br>
+                des informations sur les capteurs de votre périphérique tels que les accéléromètres, les gyroscopes et les compas.<br><br>
+
+                D'autres informations avec votre consentement<br>
+                Si vous nous y autorisez, nous pouvons aussi recueillir votre géolocalisation précise (latitude et longitude) à travers divers moyens, en fonction du service et du périphérique que vous utilisez, y compris le GPS, les connexions Bluetooth ou Wi-Fi. La collecte de votre géolocalisation peut se produire en arrière-plan même lorsque vous n'utilisez pas les services si la permission que vous nous avez accordée autorise expressément la collecte de ces informations. Si vous nous refusez cette permission de recueillir votre géolocalisation, nous ne le ferons pas.<br>
+                De même, si vous y consentez, nous pourrons recueillir vos photos et vos vidéos (par exemple, si vous voulez publier une photo, une vidéo ou un flux de diffusion sur les services).
+            </p><br><br>
+
+
+            <h4 class=" text-2xl mb-4 lg:mt-4 font-bold">4. COOKIES ET AUTRES TECHNOLOGIES DE COLLECTE DES DONNÉES SIMILAIRES</h4>
+            <p>
+                Nous utilisons et pouvons autoriser d'autres personnes à utiliser des cookies et des technologies similaires (p. ex., des balises web, des pixels) afin de vous reconnaître et/ou de reconnaître votre ou vos périphériques. Vous pouvez lire notre Politique relative à l'utilisation des cookies pour plus d'informations sur les raisons pour lesquelles nous les utilisons (telles que pour vous authentifier, se souvenir de vos préférences et de vos paramètres, analyser le trafic et les tendances du site, garantir et mesurer l'efficacité des campagnes de publicité, vous permettre d'utiliser les fonctionnalités sociales) ainsi que sur la façon dont vous pouvez mieux contrôler leur utilisation, à travers vos paramètres de navigateur et d'autres outils.<br><br>
+
+                Certains navigateurs Internet (et notamment Safari, Internet Explorer, Firefox et Chrome) ont une fonctionnalité « Ne pas suivre » (« Do Not Track, DNT ») qui indique à un site Internet qu'un utilisateur ne souhaite pas que son activité en ligne soit suivie. Si un site Internet qui répond à un signal DNT reçoit un signal DNT, le navigateur peut bloquer ce site Internet et l'empêcher de collecter certaines informations sur l'utilisateur du navigateur. Tous les navigateurs ne proposent pas une option DNT et les signaux DNT ne sont pas encore uniformisés. C'est pourquoi, de nombreuses entreprises, y compris Tinder, ne répondent pas à l'heure actuelle aux signaux DNT.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">5. COMMENT NOUS UTILISONS LES INFORMATIONS</h4>
+            </p>
+            La principale raison pour laquelle nous utilisons vos informations est afin de fournir et d'améliorer nos services. Par ailleurs, nous utilisons vos informations pour nous aider à vous protéger et à vous proposer des publicités susceptibles de vous intéresser. Veuillez poursuivre votre lecture pour avoir des explications détaillées quant aux diverses raisons pour lesquelles nous utilisons vos informations, ainsi que quelques exemples concrets.
+            Pour administrer votre compte et vous fournir nos services<br><br>
+
+            Créer et gérer votre compte<br>
+            Vous offrir une assistance à la clientèle et répondre à vos demandes<br>
+            Réaliser vos transactions<br>
+            Communiquer avec vous au sujet de nos services, y compris la gestion et la facturation des commandes<br><br>
+
+            Pour vous aider à vous connecter à d'autres utilisateurs<br><br>
+
+            Analyser votre profil, vos activités sur le service et vos préférences pour vous recommander des personnes et vous recommander à d'autres personnes. Pour en savoir plus sur l'établissement de profils et les décisions automatisées que nous prenons, veuillez consulter notre FAQ<br>
+            Afficher mutuellement les profils des utilisateurs<br><br>
+
+            Pour garantir une expérience cohérente sur tous vos périphériques<br><br>
+
+            Lier les différents périphériques que vous utilisez de telle sorte que vous pouvez profiter d'une expérience cohérente de nos services sur chacun d'entre eux. Nous y parvenons en liant les données des périphériques et du navigateur, telles que quand vous vous connectez à votre compte sur différents périphériques ou en utilisant une adresse IP partielle ou complète, la version du navigateur et d'autres données similaires sur vos périphériques pour permettre de les identifier et de les lier entre eux.<br>
+
+            Pour vous proposer les nouveaux services de Tinder<br><br>
+
+            Vous inscrire et publier votre profil sur les nouvelles fonctionnalités et applications de Tinder<br>
+            Gérer votre compte sur ces nouvelles fonctionnalités et applications<br><br>
+
+            Pour vous proposer des offres et des publicités pertinentes<br><br>
+
+            Administrer les loteries publicitaires, les concours, les réductions ou autres offres<br>
+            Développer, présenter et suivre le contenu et la publicité taillés sur mesure sur vos intérêts pour nos services et les autres sites<br>
+            Communiquer avec vous par email, téléphone, médias sociaux ou périphérique mobile à propos des produits ou des services dont nous pensons qu'ils pourraient vous intéresser<br><br>
+
+            Pour améliorer nos services et en développer de nouveaux<br><br>
+
+            Administrer les groupes de discussion et les sondages<br>
+            Mener des recherches et une analyse du comportement des utilisateurs afin d'améliorer nos services et notre contenu (par exemple, nous pouvons décider de modifier l'apparence et l'aspect ou même de changer sensiblement une caractéristique donnée sur le comportement des utilisateurs)<br>
+            Développer de nouvelles fonctionnalités et services (par exemple, nous pouvons décider de développer une nouvelle fonctionnalité basée sur les intérêts pour approfondir les requêtes reçues des utilisateurs).<br><br>
+
+            Pour empêcher, détecter et lutter contre la fraude ou toute autre activité illégale ou non autorisée<br><br>
+
+            Traiter un mauvais comportement en cours ou présumé sur et en dehors de la plateforme<br>
+            Effectuer des analyses de données pour mieux comprendre et concevoir des contremesures contre ces activités<br>
+            Retenir les données associées aux activités frauduleuses pour se prémunir contre les récidives<br><br>
+
+            Pour garantir la conformité juridique<br><br>
+
+            Se conformer aux exigences légales<br>
+            Participer à l'application de la loi<br>
+            Faire appliquer ou exercer nos droits, par exemples nos Conditions<br><br>
+
+            Pour traiter vos informations comme décrit plus haut, nous nous appuyons sur les bases légales suivantes :<br><br>
+
+            Vous offrir notre service : La plupart du temps, nous traitons vos informations pour exécuter le contrat que vous avez avec nous. Par exemple, lorsque vous utilisez notre service pour bâtir des connexions significatives, nous utilisons vos informations pour maintenir votre compte et votre profil, pour le rendre consultable par d'autres utilisateurs et vous recommander d'autres utilisateurs.<br>
+            Intérêts légitimes : Nous pouvons utiliser vos informations lorsque nous avons des intérêts légitimes de le faire. Par exemple, nous utilisons le comportement des utilisateurs sur nos services pour améliorer constamment nos offres, nous suggérons des offres dont nous pensons qu'elles vous intéresseront, et nous traitons les informations à des fins administratives, de détection de la fraude et autres finalités juridiques.<br>
+            Consentement : De temps à autres, nous pouvons vous demander votre consentement pour utiliser vos informations pour certaines raisons spécifiques. Vous pouvez retirer votre consentement à tout moment en nous contactant à l'adresse fournie à la fin de la présente Politique de confidentialité.
+            </p><br><br>
+
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">6. COMMENT NOUS PARTAGEONS LES INFORMATIONS</h4>
+            <p>
+                Comme notre objectif est de vous aider à réaliser des connexions significatives, le principal partage des informations des utilisateurs est, bien sûr, avec d'autres utilisateurs. Nous partageons également certaines informations d'utilisateurs avec des prestataires de service et des partenaires qui nous assistent dans l'exploitation des services, avec d'autres sociétés de Match Group et, dans certaines cas, des autorités légales. Veuillez poursuivre votre lecture pour avoir plus de détails sur la façon dont vos informations sont partagées avec des tiers.<br><br>
+
+                Avec d'autres utilisateurs<br><br>
+
+                Vous partagez des informations avec d'autres utilisateurs lorsque vous divulguez volontairement des informations sur le service (y compris votre profil public). Soyez donc vigilants avec vos informations et assurez-vous que le contenu que vous partagez est constitué d'éléments qui peuvent être visibles publiquement sans que cela ne vous pose problème parce que ni vous ni nous ne pouvons contrôler ce que les autres font avec vos informations une fois que vous les partagez.<br><br>
+
+                Si vous choisissez de limiter le public pour tout ou une partie de votre profil ou pour certains contenus ou informations vous concernant, alors ils seront visibles conformément à vos paramètres.<br>
+                Avec nos prestataires de service et nos partenaires<br><br>
+
+                Nous utilisons des tierces parties pour nous aider à exploiter et à améliorer nos services. Ces tierces parties nous viennent en aide avec diverses tâches, y compris l'hébergement et l'entretien des données, les analyses, l'assistance à la clientèle, le marketing, la publicité, le traitement des paiements et les opérations de sécurité.<br><br>
+
+                Nous pouvons également partager des informations avec des partenaires qui distribuent et nous aident dans la promotion de nos services. Par exemple, nous pouvons partager des informations limitées à votre sujet sous une forme hachée, illisible pour les humains avec nos partenaires publicitaires.<br><br>
+
+                Nous suivons un processus de filtrage rigoureux avant d'engager tout prestataire de service ou de travailler avec tout partenaire. Tous nos prestataires de services et partenaires doivent respecter des obligations strictes en matière de confidentialité.<br>
+                Pour les autres activités de Match Group<br><br>
+
+                Tinder fait partie de la famille d'entreprises Match Group qui, à la date de cette Politique de confidentialité, inclut différents sites Web et différentes applications, notamment Tinder, OkCupid, Plenty of Fish, Match, Meetic, BlackPeopleMeet, LoveScout24, OurTime, Pairs, ParPerfeito et Twoo (cliquez ici pour en savoir plus).<br><br>
+
+                Nous communiquons vos informations aux autres sociétés de Match Group pour qu’elles puissent nous aider à traiter vos informations, en qualité de prestataires de services, selon vos instructions et pour votre compte. L’assistance fournie par les autres sociétés de Match Group peut inclure notamment des opérations techniques de traitement, comme l’hébergement et la gestion des données, le service à la clientèle, le marketing et la publicité ciblée, une assistance comptable et financière, une meilleure compréhension de la façon dont vous utilisez nos services ainsi que des habitudes des utilisateurs pour nous permettre d’améliorer nos services, la sécurisation de nos données et systèmes et la lutte contre les courriers indésirables, l’exploitation, l’utilisation frauduleuse, les infractions et autres malversations.<br><br>
+
+                Nous pouvons également communiquer vos informations à d’autres sociétés de Match Group à des fins commerciales légitimes, notamment un audit d’entreprise, l’analyse et la consolidation des rapports ainsi que la conformité avec les lois en vigueur. Nous pouvons également communiquer les informations des utilisateurs à d’autres sociétés de Match Group pour supprimer les utilisateurs qui enfreignent nos conditions d’utilisation ou dont les activités criminelles ou le comportement déplacé ont été signalés. Dans certains cas, nous pouvons supprimer l’utilisateur de toutes les plateformes.<br>
+                Pour les transactions d'entreprise<br><br>
+
+                Nous pouvons transférer vos informations si nous sommes impliqués, en tout ou en partie, dans une fusion, une vente, une acquisition, une cession, une restructuration, une réorganisation, une dissolution, une banqueroute ou d'autres changement de propriété ou de contrôle.<br>
+                Lorsque la législation l'exige<br><br>
+
+                Nous pouvons divulguer vos informations si cela est raisonnablement nécessaire : (i) pour se conformer à un processus légal, tel qu'une ordonnance du tribunal, une assignation ou un mandat de perquisition, une enquête gouvernementale ou judiciaire ou une autre exigence légale ; (ii) pour offrir une aide dans la prévention ou la détection d'une action criminelle (soumise dans chaque cas à la législation en vigueur) ; ou (iii) pour protéger la sécurité de toute personne.<br>
+                Pour appliquer les droits juridiques<br><br>
+
+                Nous pouvons également partager des informations : (i) si leur divulgation devait atténuer notre responsabilité dans des poursuites judiciaires en cours ou potentielles ; (ii) selon ce qui est nécessaire pour protéger nos droits légaux et les droits légaux de nos utilisateurs, de nos partenaires commerciaux ou d'autres parties intéressées ; (iii) pour renforcer nos accords avec vous ; et (iv) pour enquêter, éviter, ou prendre d'autres mesures concernant une activité illégale, une fraude soupçonnée ou un autre acte répréhensible.<br>
+                Avec votre consentement ou à votre demande<br><br>
+
+                Nous pouvons demander votre consentement pour partager vos informations avec des tierces parties. Dans de tels cas, nous vous exprimerons clairement pourquoi nous avons besoin de partager les informations.<br><br>
+
+                Nous pouvons utiliser et partager des informations non personnelles (c.-à-d., des informations qui par elles-mêmes n'identifient pas qui vous êtes telles que des informations sur le périphérique, des données démographiques générales, des données comportementales générales, de géolocalisation sous une forme désidentifiée), ainsi que des informations personnelles sous une forme hachée, illisible par l'être humain, dans l'une des circonstances suscitées. Nous pouvons également partager ces informations avec d'autres entreprises de Match Group et des tiers (notamment les publicitaires) afin d'élaborer et de présenter des publicités ciblées sur notre service et sur les sites Web ou applications de tiers et d'effectuer des analyses et des rapports sur les publicités que vous voyez. Nous pouvons combiner ces informations avec des informations non personnelles ou personnelles sous une forme hachée et illisible par l'être humain que nous recueillons auprès d'autres sources. Plus d'informations sur l'utilisation que nous faisons des cookies et des technologies similaires sont disponibles dans notre Politique relative à l'utilisation des cookies.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">7. TRANSFERTS DE DONNÉES TRANSFRONTALIERS</h4>
+            <p>
+                Le partage des renseignements énoncé dans la Section 6 implique parfois des transferts de données transfrontaliers, par exemple vers les États-Unis
+                d'Amérique et d'autres juridictions. À titre d'exemple, lorsque le service permet aux utilisateurs d'être localisés dans l'Espace Économique Européen (« E.E.E. »),
+                leurs informations personnelles sont transférées vers des pays situés en dehors de l'E.E.E. Nous utilisons des clauses contractuelles types approuvées par la Commission
+                européenne ou d'autres clauses de sauvegarde appropriées pour autoriser des transferts de données depuis l'E.E.E. vers d'autres pays. Les clauses contractuelles types sont
+                des engagements entre les sociétés transférant les données personnelles, les liant pour protéger la confidentialité et la sécurité de vos données.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">8. VOS DROITS</h4>
+            <p>
+                Nous voulons que vous contrôliez vos informations, et c'est pour cela que nous avons fourni les outils suivants :<br><br>
+
+                Outils d'Accès / de Mise à jour dans le service. Les outils et les paramètres de compte qui vous aident à accéder, rectifier ou supprimer les informations que vous nous avez livrées et qui sont associées à votre compte directement au sein du service. Si vous avez des questions sur ces outils et paramètres, veuillez contacter notre équipe du service client pour de l'aide ici.
+                Autorisations du périphérique. Les plateformes mobiles disposent de systèmes d'autorisation pour des types spécifiques de données et de notifications de périphérique, tels que le carnet d'adresse et les services de localisation ainsi que les notifications push. Vous pouvez modifier vos paramètres sur votre périphérique pour consentir ou vous opposer à la collecte des informations correspondantes ou l'affichage des notifications correspondantes. Bien sûr, si vous le faites, certains services peuvent perdre une partie de leurs fonctionnalités.
+                Suppression. Vous pouvez supprimer votre compte en utilisant la fonctionnalité correspondante directement sur le service.<br><br>
+
+                Nous voulons que vous soyez informés de vos droits en matière de confidentialité. Voici quelques points clés à retenir :<br><br>
+
+                Réviser vos informations. Les lois sur la confidentialité en vigueur peuvent vous octroyer le droit de réviser les informations personnelles que nous conservons à votre sujet (en fonction de la juridiction, cela peut être appelé le droit d'accès, le droit de transférabilité ou des variations de ces termes). Vous pouvez demander une copie de vos informations personnelles en plaçant une telle demande ici.<br>
+                Mettre à jour vos informations. Si vous pensez que les informations que nous détenons à votre sujet sont inexactes ou que nous ne sommes plus habilités à les utiliser et que vous souhaitez demander leur rectification, leur suppression ou refuser leur traitement, veuillez nous contacter ici.<br><br>
+
+                Pour votre protection et la protection de tous nos utilisateurs, il se peut que nous vous demandions de fournir une preuve d'identité avant que nous puissions répondre aux demandes ci-dessus.<br><br>
+
+                Gardez à l'esprit qu'il se peut que nous refusions les demandes pour certaines raisons, et notamment si la demande est illégale ou si elle peut enfreindre des secrets commerciaux ou une propriété intellectuelle ou la confidentialité d'un autre utilisateur. Si vous souhaitez recevoir des informations relatives à un autre utilisateur, telles qu'une copie de tous les messages que vous avez reçus de sa part ou par l'intermédiaire de notre service, l'autre utilisateur devra contacter notre responsable de la protection de la vie privée (Privacy Officer) pour lui fournir son consentement écrit avant que les informations ne soit publiées.<br><br>
+
+                D'autre part, il se peut que nous ne puissions pas accéder à certaines demandes pour refuser le traitement des informations personnelles, notamment lorsque ces demandes ne nous permettraient plus de vous fournir nos services. Par exemple, nous ne pouvons pas fournir notre service si nous n'avons pas votre date de naissance.<br><br>
+
+                Désinstaller. Vous pouvez arrêter la collecte des informations par une application en la désinstallant à l'aide du processus de désinstallation standard pour votre périphérique. Si vous désinstallez l'application de votre périphérique mobile, l'identificateur unique associé à celui-ci continuera d'être stocké. Si vous réinstallez l'application sur le même périphérique mobile, nous serons capables de réassocier cet identificateur à vos transactions et à vos activités précédentes.<br>
+                Responsabilité. Dans certains pays, y compris dans l'Union Européenne, vous avez droit de déposer une plainte auprès de l'autorité de protection des données appropriée si vous avez des inquiétudes quant à la façon dont nous traitons vos informations personnelles. L'autorité de protection des données auprès de laquelle vous pouvez déposer une plainte peut notamment être celle de votre résidence habituelle, là où vous travaillez ou là où vous êtes établi.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">9. RÉSIDENTS DE CALIFORNIE</h4>
+            <p>
+                Si vous êtes un résident de Californie, vous pouvez demander un avis divulguant les catégories d'informations personnelles vous concernant que nous avons partagées avec des tiers à des fins de marketing direct pendant l'année civile précédente. Pour demander cet avis, veuillez soumettre votre demande ici. Veuillez prévoir 30 jours pour obtenir une réponse. Pour votre protection et celle de tous nos utilisateurs, il se peut que nous vous demandions de fournir une preuve d'identité avant de pouvoir répondre à une telle demande.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">10. COMMENT NOUS PROTÉGEONS VOS INFORMATIONS PERSONNELLES</h4>
+            <p>
+                Nous travaillons dur pour vous protéger contre tout accès non autorisé ou toute altération, divulgation ou destruction de vos informations personnelles. Comme pour toutes les entreprises de technologie, bien que nous prenions des mesures pour sécuriser vos informations, nous ne pouvons pas vous garantir, et vous ne pouvez pas attendre de nous, que vos informations personnelles resteront toujours sécurisées.<br><br>
+
+                Nous surveillons régulièrement nos systèmes afin de détecter des vulnérabilités et des attaques potentielles et examinons régulièrement également nos pratiques de collecte, de stockage et de traitement des informations pour mettre à jour nos mesures de sécurité physiques, techniques et organisationnelles.<br><br>
+
+                Nous pouvons suspendre votre utilisation de tout ou partie des services sans avis si nous soupçonnons ou détectons toute infraction à la sécurité. Si vous pensez que votre compte ou vos informations ne sont plus sécurisées, veuillez nous le notifier immédiatement ici.<br><br>
+
+                Afin de nous assurer que nos systèmes et vos informations sont protégées contre tout accès non autorisé, vol et perte, nous avons mis en œuvre un programme de prime au bug. Pour plus de renseignements sur notre programme de prime au bug, veuillez cliquer ici.
+            </p><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">11. PENDANT COMBIEN DE TEMPS CONSERVONS-NOUS VOS INFORMATIONS</h4>
+            <p>
+                Nous conservons vos informations personnelles uniquement aussi longtemps que nous en avons besoin dans le cadre de pratiques commerciales légitimes (telles qu'énoncées dans la Section 5) et dans la mesure autorisée par la législation en vigueur. Pour protéger la sûreté et la sécurité de nos utilisateurs sur et en dehors de nos services, nous mettons en œuvre une fenêtre de rétention de sécurité de trois mois après la suppression du compte. Pendant cette période, les informations du compte seront conservées même si le compte n'est bien sûr plus visible sur les services.<br><br>
+
+                En pratique, nous supprimons ou anonymisons vos informations à la suppression de votre compte (suite à la fenêtre de rétention de sécurité) ou après deux ans d'inactivité continue, à moins que :<br><br>
+
+                nous devions les conserver pour nous conformer à la législation en vigueur (par exemple, certaines « données de trafic » sont conservées pendant un an pour nous conformer aux obligations statutaires de rétention des données) ;<br>
+                nous devions les garder pour apporter la preuve de notre conformité à la législation en vigueur (par exemple, les enregistrements des consentements à nos Conditions, Politique de confidentialité et autres consentements similaires sont conservés pendant 5 ans) ;<br>
+                qu'il n'y ait un problème, une réclamation ou un litige non résolu qui nécessite que nous conservions les informations pertinentes jusqu'à sa résolution ; ou<br>
+                les informations doivent être conservées pour nos intérêts commerciaux légitimes, tels que la prévention de la fraude et l'amélioration de la sûreté et de la sécurité des utilisateurs. Par exemple, les informations peuvent avoir besoin d'être conservées pour empêcher un utilisateur qui a été banni pour comportement dangereux ou des incidents de sécurité d'ouvrir un nouveau compte.<br><br>
+
+                Gardez à l'esprit que même si nos systèmes sont conçus pour mener à bien les processus de suppression des données conformément aux directives ci-dessus, nous ne pouvons pas garantir que toutes les données seront supprimées dans un délai spécifique du fait des limitations techniques.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">12. CONFIDENTIALITÉ RELATIVE AUX ENFANTS</h4>
+            <p>
+                Nos services sont limités aux utilisateurs de 18 ans ou plus. Nous n'autorisons pas les utilisateurs âgés de moins de 18 ans sur notre plateforme et nous ne recueillons pas sciemment les informations personnelles de quiconque est âgé de moins de 18 ans. Si vous soupçonnez qu'un utilisateur est âgé de moins de 18 ans, veuillez utiliser le mécanisme de signalement à votre disposition dans le service.
+            </p><br><br>
+
+            <h4 class="text-2xl mb-4 lg:mt-4 font-bold">13. MODIFICATIONS À LA POLITIQUE DE CONFIDENTIALITÉ</h4>
+            <p>
+                Parce que nous cherchons constamment des façons nouvelles et innovantes de vous aider à établir des connexions significatives, la présente politique peut être modifiée de temps à autres. Nous vous préviendrons si des modifications importantes entrent en action afin que vous ayez le temps d'examiner ces changements.
+            </p>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+<!-- PARTIE QUENTIN DOPPLER -->
+<footer >
+    <div id="bande-footer" >
+
+        <!-- Partie téléchargement de l'application (situé en bas à gauche) -->
+        <div id ="partie-gauche" >
+            <p>
+                Télécharger l'application sur
+            </p>
+            <p>
+                <a href="https://apps.apple.com/fr/app/tinder/id547702041" ><i class="text-4xl icon-apple"></i></a>
+            </p>
+            <p>
+                <a href="https://play.google.com/store/apps/details?id=com.tinder&hl=fr" ><i class="text-4xl icon-android"></i></a>
+            </p>
+        </div>
+
+        <!-- Partie détails de l'entreprise et autres infos (situé en bas au milieu) -->
+        <div id="partie-milieu" >
+            <p>
+                Entrepise
+            </p>
+            <p>
+                <a href="https://www.gotinder.com/jobs?locale=fr">Emplois</a>
+            </p>
+            <p>
+                <a href="https://www.gotinder.com/contact?locale=fr">Contact </a>
+            </p>
+            <p>
+                <a href="https://www.gotinder.com/security?locale=fr">Protection des données </a>
+            </p>
+        </div>
+        <!-- Partie suivis des réseaux sociaux (situé en bas à droite) -->
+        <div id="partie-droite" >
+            <p>
+                Suivez-nous :
+            </p>
+            <p>
+                <a href="https://www.facebook.com/tinderfr/" > FACEBOOK </a>
+                <a href="https://www.instagram.com/tinder/" > INSTA </a>
+                <a href="#" > TWITTER </a>
+                <a href="https://www.youtube.com/Tinder" > YOUTUBE </a>
+            </p>
+        </div>
+    </div><br>
+
+    <!-- Partie politique de confidentialité avec le bouton qui génèrera une popup -->
+    <div id="condition" class="text-center border-t">
+        <p><!-- href ="#" name="modal-condition" rel="modal:open" id="manual-ajax" -->
+            <a href="condition.html" id="manual-ajax" >Politique de confidentialité - Condition d'utilisation</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

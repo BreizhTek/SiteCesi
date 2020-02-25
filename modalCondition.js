@@ -4,7 +4,7 @@ $(function(){
     event.preventDefault();
     this.blur(); // Manually remove focus from clicked link.
     $.get(this.href, function(html) {
-      $(html).appendTo('body').modal();
+        $(html).appendTo('body').modal();
     });
   });
 
